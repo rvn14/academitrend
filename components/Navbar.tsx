@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className='flex items-center gap-3'>
             <div className="flex items-center gap-2">
               <BrainCircuit className="h-8 w-8 text-maroon-700" />
-              <span className="text-xl font-bold text-gray-900">EduPredict</span>
+              <span className="text-xl font-bold text-gray-900">AcademiTrend</span>
             </div>
         </div>
         <div>
