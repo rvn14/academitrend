@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Maven+Pro:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @import "tailwindcss";
 
 @plugin "tailwindcss-animate";
@@ -109,6 +111,41 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-maroon-900: #4a0012;
+}
+
+@theme inline {
+  --color-maroon-800: #800020;
+  --color-maroon-700: #b33a4d;
+  --color-maroon-600: #cc6675;
+  --color-maroon-500: #e69999;
+  --color-maroon-400: #f5b3b3;
+  --color-maroon-300: #f9cccc;
+  --color-maroon-200: #fce6e6;
+  --color-maroon-100: #fef0f0;
+
+  --font-inter: 'Inter', sans-serif;
+  --font-maven: 'Maven Pro', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-nunito: 'Nunito Sans', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-bruno: 'Bruno Ace SC', cursive;
+
+
+
+}
+
+@utility hero-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+@utility hero-gradient {
+  background: linear-gradient(135deg, #800020 0%, #4a0012 100%);
+}
+
+@layer base {
+
+  
 }
 
 @layer base {
@@ -119,4 +156,56 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.slide-in {
+  animation: slideIn 0.6s ease-out forwards;
+}
+
+.slide-in-delay-1 {
+  animation: slideIn 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.slide-in-delay-2 {
+  animation: slideIn 0.6s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
 
