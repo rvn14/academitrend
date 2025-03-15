@@ -11,9 +11,9 @@ export default function Home() {
       <div className="absolute w-full h-full hero-pattern"></div>
       
       <div className="absolute w-full min-h-[calc(100vh-80px)] flex flex-col justify-center items-center font-medium gap-3 mt-28 p-4">
-        <div className="flex items-center text-white/90 gap-3 bg-white/5 p-2 rounded-3xl backdrop-blur-xl shadow-lg">
+        <div className="flex items-center text-white/90 md:gap-3 gap-2 bg-white/5 p-2 rounded-3xl backdrop-blur-xl shadow-lg">
           <Sparkles className="h-4 w-4" />
-          <p>Revolutionizing Course Success Prediction</p>
+          <p className="text-xs md:text-sm">Revolutionizing Course Success Prediction</p>
           <ChevronRight className="h-4 w-4" />
         </div>
             <h1 className=" text-4xl md:text-6xl lg:text-7xl font-bold text-white/90 text-center ">Predict Your Course Success</h1>
