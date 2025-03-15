@@ -10,7 +10,7 @@ export default function Home() {
       <Navbar />
       <div className="absolute w-full h-full hero-pattern"></div>
       
-      <div className="absolute w-full min-h-[calc(100vh-80px)] flex flex-col justify-center items-center font-medium gap-3 mt-28 p-4">
+      <div className="absolute w-full min-h-[calc(100vh-112px)] flex flex-col justify-center items-center font-medium gap-3 mt-28 px-4">
         <div className="flex items-center text-white/90 md:gap-3 gap-2 bg-white/5 p-2 rounded-3xl backdrop-blur-xl shadow-lg">
           <Sparkles className="h-4 w-4" />
           <p className="text-xs md:text-sm">Revolutionizing Course Success Prediction</p>
