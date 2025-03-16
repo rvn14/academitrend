@@ -25,9 +25,9 @@ export default function Hero() {
   return (
     <main className="relative w-full min-h-screen bg-radial from-maroon-800/90 via-maroon-900 to-maroon-900 font-inter">
       <Navbar />
-      <div className="absolute w-full h-full hero-pattern"></div>
+      <div className="absolute w-full min-h-screen hero-pattern"></div>
       
-      <div className="absolute w-full min-h-[calc(100vh-112px)] flex flex-col justify-center items-center font-medium gap-3 mt-28 px-4">
+      <div className="w-full min-h-[calc(100vh-112px)] flex flex-col justify-center items-center font-medium gap-3 pt-28 px-4">
         <div className="floating flex items-center text-white/90 md:gap-3 gap-2 bg-white/5 p-2 rounded-3xl backdrop-blur-xl shadow-lg cursor-pointer select-none">
           <Sparkles className="h-4 w-4" />
           <p className="text-xs md:text-sm">Revolutionizing Course Success Prediction</p>
@@ -44,7 +44,7 @@ export default function Hero() {
 
         </div>
 
-        <div className="floating grid grid-cols-2 md:grid-cols-4 gap-4 pb-16 px-8 mt-12 select-none">
+        <div className="floating grid grid-cols-2 md:grid-cols-4 gap-4 pb-8 px-8 mt-12 select-none">
               <div className="bg-white/10 backdrop-blur-xs rounded-2xl p-6 text-center transform hover:scale-105 transition-all shadow-md">
                 <div className="text-3xl font-bold text-white mb-1">15K+</div>
                 <div className="text-white/80">Active Students</div>
@@ -62,6 +62,7 @@ export default function Hero() {
                 <div className="text-white/80">Real-time Analytics</div>
               </div>
           </div>
+          
       </div>
       
     </main>
