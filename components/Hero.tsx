@@ -15,10 +15,7 @@ import { useEffect } from "react";
 
 export default function Hero() {
   
-  useEffect(() => {
-    gsap.fromTo(".floating", {y: 50, opacity: 0}, {y: 0, duration: 1,opacity: 1, stagger: 0.1, ease: "power4.out"})
-    
-  }, [])
+  
   
   
 
@@ -44,7 +41,7 @@ export default function Hero() {
 
         </div>
 
-        <div className="floating grid grid-cols-2 md:grid-cols-4 gap-4 pb-16 px-8 mt-12 select-none">
+        <div className=" grid grid-cols-2 md:grid-cols-4 gap-4 pb-16 px-8 mt-12 select-none">
               <div className="bg-white/10 backdrop-blur-xs rounded-2xl p-6 text-center transform hover:scale-105 transition-all shadow-md">
                 <div className="text-3xl font-bold text-white mb-1">15K+</div>
                 <div className="text-white/80">Active Students</div>
