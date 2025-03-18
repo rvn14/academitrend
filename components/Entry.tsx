@@ -68,7 +68,7 @@ export default function SelectForm() {
       { value: "engtech", label: "Engineering Technology" },
     ],
     ucsc: [
-      { value: "softeng", label: "Bachelor of Science Honours in Computer Science" },
+      { value: "cs", label: "Bachelor of Science Honours in Computer Science" },
       { value: "ai", label: "Artificial Intelligence" },
     ],
   };
