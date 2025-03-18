@@ -131,6 +131,7 @@
   --color-maroon-300: #f9cccc;
   --color-maroon-200: #fce6e6;
   --color-maroon-100: #fef0f0;
+  --color-maroon-50: #fff5f5;
 
   --font-inter: 'Inter', sans-serif;
   --font-maven-pro: 'Maven Pro', sans-serif;
@@ -163,25 +164,7 @@
   }
 }
 
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
@@ -203,6 +186,73 @@
 .slide-in-delay-2 {
   animation: slideIn 0.6s ease-out 0.4s forwards;
   opacity: 0;
+}
+
+.preloader {
+  animation: fadeOut 0.5s ease-in-out 2s forwards;
+}
+
+.preloader-logo {
+  animation: logoReveal 1s ease-out forwards;
+}
+
+.preloader-circle {
+  animation: circleExpand 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes logoReveal {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes circleExpand {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
 
 
