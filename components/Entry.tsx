@@ -40,24 +40,35 @@ const FormSchema = z.object({
 });
 
 export default function SelectForm() {
-    const router = useRouter();
-    const form = useForm<z.infer<typeof FormSchema>>({
+  const router = useRouter();
+  const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
 
   // Mapping of universities to course options
   const courseOptions: Record<string, { value: string; label: string }[]> = {
     uok: [
-      { value: "cs", label: "Bachelor of Science Honours in Computer Science" },
-      { value: "ct", label: "Bachelor of Information and Communication Technology Honours" },
-      { value: "et", label: "Bachelor of Engineering Technology Honours Degree" },
+      {
+        value: "cs",
+        label: "Bachelor of Science Honours in Computer Science",
+      },
+      {
+        value: "ct",
+        label:
+          "Bachelor of Information and Communication Technology Honours",
+      },
+      {
+        value: "et",
+        label:
+          "Bachelor of Engineering Technology Honours Degree",
+      },
     ],
     uom: [
       { value: "it", label: "Information Technology" },
       { value: "engtech", label: "Engineering Technology" },
     ],
     ucsc: [
-      { value: "softeng", label: "Software Engineering" },
+      { value: "softeng", label: "Bachelor of Science Honours in Computer Science" },
       { value: "ai", label: "Artificial Intelligence" },
     ],
   };
@@ -80,14 +91,13 @@ export default function SelectForm() {
     toast("Form submitted successfully!");
     console.log(data);
     router.push("/predict");
-    
   }
 
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="relative w-full space-y-8"
+        className="relative w-full space-y-8 p-4"
       >
         {/* University Select */}
         <FormField
@@ -95,24 +105,24 @@ export default function SelectForm() {
           name="university"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-xl flex items-center">
-                <UniversityIcon  />
-                <p>University</p>
+              <FormLabel className="text-xl flex items-center gap-2">
+                <UniversityIcon />
+                <span>University</span>
               </FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
-                  <SelectTrigger className="sm:w-full">
+                  <SelectTrigger className="w-full overflow-hidden truncate">
                     <SelectValue placeholder="Select your university" />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent className="w-auto max-w-[90vw] overflow-auto whitespace-normal break-words">
-                  <SelectItem value="uok">
+                  <SelectItem value="uok" className="truncate">
                     University of Kelaniya
                   </SelectItem>
-                  <SelectItem value="uom">
+                  <SelectItem value="uom" className="truncate">
                     University of Moratuwa
                   </SelectItem>
-                  <SelectItem value="ucsc" className="whitespace-normal break-words">
+                  <SelectItem value="ucsc" className="truncate">
                     University of Colombo School of Computing
                   </SelectItem>
                 </SelectContent>
@@ -131,30 +141,33 @@ export default function SelectForm() {
           name="course"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-xl flex items-center">
+              <FormLabel className="text-xl flex items-center gap-2">
                 <GraduationCap />
-                Course/Degree
+                <span>Course/Degree</span>
               </FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
-                  <SelectTrigger className="sm:w-full ">
+                  <SelectTrigger className="w-full overflow-hidden truncate">
                     <SelectValue placeholder="Select your course program" />
                   </SelectTrigger>
                 </FormControl>
-                <SelectContent className="w-auto max-w-[90vw] sm:max-w-full">
-                {coursesForSelectedUniversity.length > 0 ? (
+                <SelectContent className="w-auto max-w-[90vw] sm:max-w-full overflow-auto whitespace-normal break-words">
+                  {coursesForSelectedUniversity.length > 0 ? (
                     coursesForSelectedUniversity.map((course) => (
-                    <SelectItem key={course.value} value={course.value}>
+                      <SelectItem
+                        key={course.value}
+                        value={course.value}
+                        className="truncate"
+                      >
                         {course.label}
-                    </SelectItem>
+                      </SelectItem>
                     ))
-                ) : (
-                    <SelectItem value="no-option" disabled>
-                    Please select a university first
+                  ) : (
+                    <SelectItem value="no-option" disabled className="truncate">
+                      Please select a university first
                     </SelectItem>
-                )}
+                  )}
                 </SelectContent>
-
               </Select>
               <FormDescription>
                 {selectedUniversity
