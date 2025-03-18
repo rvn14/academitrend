@@ -1,5 +1,5 @@
 "use client"
-import { BrainCircuit } from 'lucide-react'
+import { BrainCircuit, Phone } from 'lucide-react'
 import React from 'react'
 import { Button } from './ui/button'
 import Link from 'next/link'
@@ -17,7 +17,7 @@ const Navbar = () => {
         </div>
         <div className='navItems'>
         <Button asChild className="bg-maroon-700 text-white">
-            <Link href="/login">Login</Link>
+            <Link href="/login"> <Phone/> Contact us</Link>
         </Button>
         </div>
     </div>
