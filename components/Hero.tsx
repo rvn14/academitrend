@@ -1,24 +1,21 @@
 "use client"
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
-import gsap from "gsap";
 import { ArrowRight, BrainCog, ChevronRight, Sparkles } from "lucide-react";
+import gsap from "gsap";
 import Link from "next/link";
 import { useEffect } from "react";
 
 
 
-
-
-
-
-
 export default function Hero() {
-  
+
   useEffect(() => {
-    gsap.fromTo(".floating", {y: 50, opacity: 0}, {y: 0, duration: 1,opacity: 1, stagger: 0.1, ease: "power4.out"})
+    gsap.fromTo(".floating", {y: 50, opacity: 0}, {y: 0, duration: 1,opacity: 1, stagger: 0.1, ease: "power4.out"});
+  
     
   }, [])
+  
   
   
 
@@ -36,7 +33,7 @@ export default function Hero() {
             <h1 className="floating text-4xl md:text-6xl lg:text-7xl font-bold text-white/90 text-center ">Predict Your Course Success</h1>
             <p className="floating text-lg md:text-xl text-white/70 text-center px-8 md:w-3/4">Leverage AI-powered analytics to optimize enrollment strategies and maximize student engagement with our cutting-edge prediction platform</p>
         <div className="floating flex justify-center items-center gap-12 mt-4">
-          <Button className="bg-white text-maroon-800 flex items-center hover:bg-white/80 cursor-pointer rounded-full scale-125 shadow-2xs "><Link href={"/predict"}>Get Started</Link> <ArrowRight/> </Button>
+          <Button className="bg-white text-maroon-800 flex items-center hover:bg-white/80 cursor-pointer rounded-full scale-125 shadow-2xs "><Link href="/" >Get Started</Link> <ArrowRight/> </Button>
           <Button className="bg-white/10 text-white/90 hover:bg-white/20 flex items-center cursor-pointer rounded-full scale-125 backdrop-blur-xs shadow-2xs">
             <Link href={"/"}>Learn More</Link>
             <BrainCog/>
