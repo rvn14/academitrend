@@ -87,7 +87,7 @@ export default function SelectForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="w-full space-y-8"
+        className="relative w-full space-y-8"
       >
         {/* University Select */}
         <FormField
@@ -101,18 +101,18 @@ export default function SelectForm() {
               </FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
-                  <SelectTrigger className="w-full text-md">
+                  <SelectTrigger className="sm:w-full">
                     <SelectValue placeholder="Select your university" />
                   </SelectTrigger>
                 </FormControl>
-                <SelectContent>
+                <SelectContent className="w-auto max-w-[90vw] overflow-auto whitespace-normal break-words">
                   <SelectItem value="uok">
                     University of Kelaniya
                   </SelectItem>
                   <SelectItem value="uom">
                     University of Moratuwa
                   </SelectItem>
-                  <SelectItem value="ucsc">
+                  <SelectItem value="ucsc" className="whitespace-normal break-words">
                     University of Colombo School of Computing
                   </SelectItem>
                 </SelectContent>
@@ -137,11 +137,11 @@ export default function SelectForm() {
               </FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
-                  <SelectTrigger className="w-full text-md">
+                  <SelectTrigger className="sm:w-full ">
                     <SelectValue placeholder="Select your course program" />
                   </SelectTrigger>
                 </FormControl>
-                <SelectContent>
+                <SelectContent className="w-auto max-w-[90vw] sm:max-w-full">
                 {coursesForSelectedUniversity.length > 0 ? (
                     coursesForSelectedUniversity.map((course) => (
                     <SelectItem key={course.value} value={course.value}>

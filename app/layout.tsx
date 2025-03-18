@@ -18,6 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      
       <body
         className={`antialiased text-gray-900 bg-white dark:bg-gray-900 dark:text-white`}
       >
