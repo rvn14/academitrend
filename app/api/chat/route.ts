@@ -4,12 +4,8 @@ import OpenAI from "openai";
 
 const openai = new OpenAI({
   baseURL: "https://openrouter.ai/api/v1",
-  apiKey: "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",
-  defaultHeaders: {
-    // These are optional, but nice for OpenRouter rankings
-    "HTTP-Referer": "https://your-site-url.com", // <-- update!
-    "X-Title": "AcademiTrends", // <-- update!
-  },
+  apiKey: "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",
+  
 });
 
 export async function POST(req: NextRequest) {
@@ -54,18 +50,12 @@ When possible, base your answers on data from the following official Sri Lankan 
 - Eastern University: https://www.esn.ac.lk/
 - Open University: https://www.ou.ac.lk/
 - Rajarata University: https://www.rjt.ac.lk/
-- [Add others as needed…]
 
 If you do not know an answer for certain, politely suggest the user visit these official websites for the latest details.
 Always cite or reference these sites when relevant.
 
 ---
 
-**When answering, always:**
-- Structure your responses with clear section headings (like Degree Programs, Admission Requirements, Career Prospects, and References).
-- Use bullet points or numbered lists for multiple items.
-- Use Markdown formatting for clarity (e.g., **bold** for section headers).
-- Keep explanations concise, relevant, and easy to scan.
 `,
         },
         { role: "user", content: message },
@@ -80,6 +70,10 @@ Always cite or reference these sites when relevant.
     return NextResponse.json({ reply: markdownReply });
   } catch (error: any) {
     console.error("OpenRouter error:", error);
-    return NextResponse.json({ error: "Something went wrong." }, { status: 500 });
+    // Return error message for debugging
+    return NextResponse.json(
+      { error: "Something went wrong.", details: error?.message ?? String(error) },
+      { status: 500 }
+    );
   }
 }

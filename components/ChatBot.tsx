@@ -68,7 +68,7 @@ export default function Chatbot() {
 
       
       {open && (
-        <div className="fixed bottom-8 right-8 w-128 bg-white/95 border-2 border-maroon-700 rounded-2xl shadow-2xl flex flex-col z-50 font-inter animate-fade-in backdrop-blur-sm">
+        <div className="fixed bottom-8 right-8 w-128 bg-white/95 border-2 border-maroon-700 rounded-2xl shadow-2xl flex flex-col z-50 font-inter animate-fade-in backdrop-blur-xs">
           <div className="flex items-center justify-between px-4 py-3 bg-maroon-700 rounded-t-2xl">
             <span className="font-bold text-white text-lg">
               AcademiTrends Chatbot
