@@ -48,7 +48,7 @@ export default function Chatbot() {
     <>
       {/* Floating Button */}
       <button
-        className={`fixed bottom-8 right-8 z-50 bg-maroon-700 hover:bg-maroon-800 text-white rounded-full shadow-lg p-4 flex items-center transition-all ${
+        className={`fixed bottom-8 right-8 z-50 bg-maroon-700 hover:bg-maroon-800 text-white rounded-full shadow-lg p-4 flex items-center transition-all cursor-pointer ${
           open ? "hidden" : ""
         }`}
         aria-label="Open Chatbot"
@@ -66,9 +66,9 @@ export default function Chatbot() {
         <span className="ml-2 font-semibold hidden md:inline">Chat</span>
       </button>
 
-      {/* Chatbot Panel */}
+      
       {open && (
-        <div className="fixed bottom-8 right-8 w-128 bg-white/95 border-2 border-maroon-700 rounded-2xl shadow-2xl flex flex-col z-50 font-inter animate-fade-in">
+        <div className="fixed bottom-8 right-8 w-128 bg-white/95 border-2 border-maroon-700 rounded-2xl shadow-2xl flex flex-col z-50 font-inter animate-fade-in backdrop-blur-sm">
           <div className="flex items-center justify-between px-4 py-3 bg-maroon-700 rounded-t-2xl">
             <span className="font-bold text-white text-lg">
               AcademiTrends Chatbot
