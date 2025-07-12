@@ -31,12 +31,13 @@ const CareerPage = ({ params }: CareerPageProps) => {
             {program.duration}
           </div>
           <div className="flex items-center justify-center h-full">
-            <div className="h-46 w-46 bg-white rounded-full flex items-center justify-center ">
+            <div className="w-46 aspect-square bg-white rounded-full flex items-center justify-center overflow-hidden">
               <Image
                 src={program.campusLogo}
-                alt={`logo`}
-                fill
-                className="object-contain object-center w-full h-full"
+                alt="logo"
+                width={170}
+                height={170}
+                className="object-contain object-center"
               />
             </div>
           </div>
