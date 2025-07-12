@@ -88,13 +88,12 @@ const CourseDetailPage = ({ params }: CourseDetailPageProps) => {
             <div className="lg:col-span-2 flex flex-col justify-center">
               <div className="flex items-center gap-6 mb-8">
                 <div className="w-28 h-28 bg-white/80 backdrop-blur-lg border border-maroon-100 rounded-full flex items-center justify-center shadow-xl">
-                  <Image
-                    src={course.campusLogo}
-                    alt={`logo`}
-                    width={100}
-                    height={100}
-                    className="rounded-full object-cover"
-                  />
+              <Image
+                src={course.campusLogo}
+                alt={`logo`}
+                fill
+                className="object-contain object-center w-full h-full"
+              />
                 </div>
                 <div>
                   <div className="flex items-center gap-3 mb-3">

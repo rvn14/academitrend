@@ -26,7 +26,7 @@ const CareerPage = ({ params }: CareerPageProps) => {
     <Link href={`/career/${path}/${program.id}`} className="block h-full">
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full min-h-[500px]">
         <div className="relative h-48 bg-gradient-to-br from-maroon-50 to-maroon-100">
-          <div className="absolute top-4 left-4 bg-maroon-700 text-white px-3 py-1 rounded-full text-sm font-medium">
+          <div className="absolute top-4 left-4 bg-maroon-700 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">
             <Clock className="w-3 h-3 inline mr-1" />
             {program.duration}
           </div>
@@ -35,9 +35,8 @@ const CareerPage = ({ params }: CareerPageProps) => {
               <Image
                 src={program.campusLogo}
                 alt={`logo`}
-                width={250}
-                height={250}
-                className="rounded-full object-cover object-center"
+                fill
+                className="object-contain object-center w-full h-full"
               />
             </div>
           </div>
@@ -87,7 +86,7 @@ const CareerPage = ({ params }: CareerPageProps) => {
 
   return (
     <div className="min-h-screen bg-gray-50 font-inter">
-      {/* Header */}
+      
       <header className="relative z-50 bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -113,7 +112,7 @@ const CareerPage = ({ params }: CareerPageProps) => {
         </div>
       </header>
 
-      {/* Hero Section */}
+      
       <section className="relative bg-gradient-to-br from-maroon-100 to-maroon-200 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -153,17 +152,17 @@ const CareerPage = ({ params }: CareerPageProps) => {
 
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Filter Bar */}
+        
         
 
-        {/* Programs Grid */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {degreePrograms.map((program) => (
             <CourseCard key={program.id} program={program} />
           ))}
         </div>
 
-        {/* Load More Button */}
+        
         <div className="text-center mt-16">
           <button className="bg-white border-2 border-maroon-700 text-maroon-700 px-8 py-3 rounded-full font-semibold hover:bg-maroon-700 hover:text-white transition-all duration-200">
             More will updated soon!

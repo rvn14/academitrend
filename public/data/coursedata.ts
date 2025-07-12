@@ -73,7 +73,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       id: '3',
       title: 'BSc Engineering Honours Degree in Computer Science and Engineering',
       university: 'University of Moratuwa',
-      duration: '2 years',
+      duration: '4 years',
       level: 'Postgraduate',
       campusLogo: '/images/universities/uom-logo.png',
       tuitionFee: 'Rs. 400,000',
@@ -88,7 +88,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       university: 'University of Colombo',
       duration: '5 years',
       level: 'Undergraduate',
-      campusLogo: '/images/universities/medical-colombo.png',
+      campusLogo: '/images/universities/uoc-logo.png',
       tuitionFee: 'Rs. 150,000',
       description: 'Premier medical degree program with clinical training at National Hospital.',
       enrollLink: '/enroll/mbbs-colombo'
@@ -99,7 +99,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       university: 'University of Peradeniya',
       duration: '5 years',
       level: 'Undergraduate',
-      campusLogo: '/images/universities/dental-pera.png',
+      campusLogo: '/images/universities/pera-logo.png',
       tuitionFee: 'Rs. 200,000',
       description: 'Comprehensive dental surgery program with modern clinical facilities.',
       enrollLink: '/enroll/bds-pera'
@@ -110,7 +110,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       university: 'University of Peradeniya',
       duration: '5 years',
       level: 'Undergraduate',
-      campusLogo: '/images/universities/vet-pera.png',
+      campusLogo: '/images/universities/pera-logo.png',
       tuitionFee: 'Rs. 180,000',
       description: 'Veterinary medicine program with animal hospital training.',
       enrollLink: '/enroll/vet-pera'
@@ -123,7 +123,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       university: 'University of Colombo',
       duration: '4 years',
       level: 'Undergraduate',
-      campusLogo: '/images/universities/cms-logo.png',
+      campusLogo: '/images/universities/uoc-logo.png',
       tuitionFee: 'Rs. 220,000',
       description: 'Comprehensive BBA program with specializations in finance, marketing, and management.',
       enrollLink: '/enroll/bba-cms'
@@ -134,7 +134,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       university: 'University of Sri Jayewardenepura',
       duration: '2 years',
       level: 'Postgraduate',
-      campusLogo: '/images/universities/sjp-mba.png',
+      campusLogo: '/images/universities/sjp-logo.png',
       tuitionFee: 'Rs. 500,000',
       description: 'Premier MBA program with industry partnerships and case study methodology.',
       enrollLink: '/enroll/mba-sjp'
@@ -145,7 +145,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       university: 'University of Kelaniya',
       duration: '4 years',
       level: 'Undergraduate',
-      campusLogo: '/images/universities/kelaniya-logo.png',
+      campusLogo: '/images/universities/uok-logo.png',
       tuitionFee: 'Rs. 180,000',
       description: 'Commerce degree with focus on accounting, finance, and business law.',
       enrollLink: '/enroll/bcom-kelaniya'
@@ -158,7 +158,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       university: 'University of Colombo',
       duration: '4 years',
       level: 'Undergraduate',
-      campusLogo: '/images/universities/law-colombo.png',
+      campusLogo: '/images/universities/uoc-logo.png',
       tuitionFee: 'Rs. 160,000',
       description: 'Premier law degree with constitutional, criminal, and commercial law specializations.',
       enrollLink: '/enroll/llb-colombo'
@@ -169,7 +169,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       university: 'University of Peradeniya',
       duration: '4 years',
       level: 'Undergraduate',
-      campusLogo: '/images/universities/law-pera.png',
+      campusLogo: '/images/universities/pera-logo.png',
       tuitionFee: 'Rs. 150,000',
       description: 'Comprehensive law program with moot court and legal clinic experience.',
       enrollLink: '/enroll/llb-pera'
@@ -180,7 +180,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       university: 'University of Colombo',
       duration: '1 year',
       level: 'Postgraduate',
-      campusLogo: '/images/universities/law-colombo.png',
+      campusLogo: '/images/universities/uoc-logo.png',
       tuitionFee: 'Rs. 300,000',
       description: 'Advanced law degree with research focus on international and comparative law.',
       enrollLink: '/enroll/llm-colombo'
@@ -193,7 +193,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       university: 'University of Peradeniya',
       duration: '3 years',
       level: 'Undergraduate',
-      campusLogo: '/images/universities/arts-pera.png',
+      campusLogo: '/images/universities/pera-logo.png',
       tuitionFee: 'Rs. 120,000',
       description: 'English literature and language program with creative writing specialization.',
       enrollLink: '/enroll/ba-english-pera'
@@ -215,7 +215,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       university: 'University of the Visual & Performing Arts',
       duration: '4 years',
       level: 'Undergraduate',
-      campusLogo: '/images/universities/music-vpa.png',
+      campusLogo: '/images/universities/vpa-logo.png',
       tuitionFee: 'Rs. 180,000',
       description: 'Music degree with classical, contemporary, and traditional Sri Lankan music.',
       enrollLink: '/enroll/bmus-vpa'
