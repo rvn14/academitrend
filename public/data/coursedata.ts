@@ -71,7 +71,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     },
     {
       id: '3',
-      title: 'Master of Data Science',
+      title: 'BSc Engineering Honours Degree in Computer Science and Engineering',
       university: 'University of Moratuwa',
       duration: '2 years',
       level: 'Postgraduate',
