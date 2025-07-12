@@ -37,7 +37,7 @@ const CareerPage = ({ params }: CareerPageProps) => {
                 alt="logo"
                 width={170}
                 height={170}
-                className="object-contain object-center"
+                className="object-contain object-center rounded-full"
               />
             </div>
           </div>
