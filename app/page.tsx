@@ -1,5 +1,6 @@
 import { ChevronRight, Sparkles, BookOpen, Users, TrendingUp, BrainCircuit, Code, Stethoscope, Scale, Palette, Users2, } from 'lucide-react';
 import React from 'react';
+import Link from 'next/link';
 import CareerPathCard from '@/components/CareerPathCard';
 
 
@@ -21,11 +22,11 @@ export default function Home() {
             </div>
             
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-gray-900 hover:text-maroon-700 font-medium">Home</a>
-              <a href="#" className="text-gray-600 hover:text-maroon-700">Universities</a>
-              <a href="#" className="text-gray-600 hover:text-maroon-700">Programs</a>
-              <a href="#" className="text-gray-600 hover:text-maroon-700">Trends</a>
-              <a href="#" className="text-gray-600 hover:text-maroon-700">About</a>
+              <Link href="/" className="text-gray-900 hover:text-maroon-700 font-medium">Home</Link>
+              <Link href="/universities" className="text-gray-600 hover:text-maroon-700">Universities</Link>
+              <Link href="/programs" className="text-gray-600 hover:text-maroon-700">Programs</Link>
+              <Link href="/trends" className="text-gray-600 hover:text-maroon-700">Trends</Link>
+              <Link href="/about" className="text-gray-600 hover:text-maroon-700">About</Link>
             </nav>
 
             <button className="bg-maroon-700 text-white px-6 py-2 rounded-full hover:bg-maroon-800 transition-colors">
@@ -209,4 +210,4 @@ export default function Home() {
     </main>
   );
 }
-              
+
