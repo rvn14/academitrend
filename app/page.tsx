@@ -22,7 +22,7 @@ export default function Home() {
             </div>
             
             <nav className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-900 hover:text-maroon-700 font-medium">Home</Link>
+              <Link href="/" className="text-maroon-700 hover:text-maroon-700 font-medium">Home</Link>
               <Link href="/universities" className="text-gray-600 hover:text-maroon-700">Universities</Link>
               <Link href="/programs" className="text-gray-600 hover:text-maroon-700">Programs</Link>
               <Link href="/trends" className="text-gray-600 hover:text-maroon-700">Trends</Link>
