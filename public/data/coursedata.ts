@@ -40,7 +40,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       university: 'University of Moratuwa',
       duration: '4 years',
       level: 'Undergraduate',
-      campusLogo: '/images/universities/uom-logo.jpg',
+      campusLogo: '/images/universities/uom-logo.png',
       tuitionFee: 'Rs. 300,000',
       description: 'Electrical engineering with specializations in power systems and electronics.',
       enrollLink: '/enroll/elect-eng-ucsc'
