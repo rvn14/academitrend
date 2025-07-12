@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/sonner";
 
 
@@ -8,7 +7,11 @@ import { Toaster } from "@/components/ui/sonner";
 export const metadata: Metadata = {
   title: "AcademiTrend",
   description: "Revelutionizing Course Success Prediction",
-  viewport: "width=device-width, initial-scale=1.0",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1.0,
 };
 
 export default function RootLayout({
@@ -20,10 +23,13 @@ export default function RootLayout({
     <html lang="en">
       
       <body
-        className={`antialiased text-gray-900 bg-white dark:bg-gray-900 dark:text-white`}
+        className={`antialiased bg-maroon-900`}
       >
-        <Navbar />
-        {children}
+        
+        
+          {children}
+        
+        
         <Toaster />
       </body>
     </html>

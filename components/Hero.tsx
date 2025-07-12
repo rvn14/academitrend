@@ -21,7 +21,7 @@ export default function Hero() {
 
   return (
     <main className="relative w-full min-h-screen bg-radial from-maroon-800/90 via-maroon-900 to-maroon-900 font-inter">
-      <Navbar />
+      
       <div className="absolute w-full min-h-screen hero-pattern"></div>
       
       <div className="w-full min-h-[calc(100vh-112px)] flex flex-col justify-center items-center font-medium gap-3 pt-28 px-4 select-none">
