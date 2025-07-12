@@ -87,12 +87,13 @@ const CourseDetailPage = ({ params }: CourseDetailPageProps) => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
             <div className="lg:col-span-2 flex flex-col justify-center">
               <div className="flex items-center gap-6 mb-8">
-                <div className="w-28 h-28 bg-white/80 backdrop-blur-lg border border-maroon-100 rounded-full flex items-center justify-center shadow-xl">
+                <div className="w-28 aspect-square bg-white/80 backdrop-blur-lg border border-maroon-100 rounded-full flex items-center justify-center shadow-xl overflow-hidden">
               <Image
                 src={course.campusLogo}
-                alt={`logo`}
-                fill
-                className="object-contain object-center w-full h-full"
+                alt="logo"
+                width={100}
+                height={100}
+                className="object-contain object-center"
               />
                 </div>
                 <div>
@@ -112,7 +113,6 @@ const CourseDetailPage = ({ params }: CourseDetailPageProps) => {
 
             <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col justify-between">
               <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                
                 Quick Stats
               </h3>
               <div className="space-y-5">

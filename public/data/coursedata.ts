@@ -49,7 +49,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
   'it': [
     {
       id: '1',
-      title: 'Bachelor of Computer Science (Hons.)',
+      title: 'Bachelor of Science in Computer Science (BSc. in CS)',
       university: 'University of Colombo School of Computing',
       duration: '4 years',
       level: 'Undergraduate',
@@ -60,7 +60,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     },
     {
       id: '2',
-      title: 'Bachelor of Compurter Science (Hons.)',
+      title: 'Bachelor of Science Honours in Computer Science Degree',
       university: 'University of Kelaniya',
       duration: '4 years',
       level: 'Undergraduate',

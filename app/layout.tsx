@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "@/components/Footer";
+import Chatbot from "@/components/ChatBot";
 
 
 
@@ -29,6 +30,7 @@ export default function RootLayout({
         
         
           {children}
+          <Chatbot />
           <Footer />
         
         <Toaster />
