@@ -11,6 +11,16 @@ export default function Chatbot() {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  // Auto-resize textarea
+  const adjustTextareaHeight = () => {
+    const textarea = textareaRef.current;
+    if (textarea) {
+      textarea.style.height = "auto";
+      textarea.style.height = `${Math.min(textarea.scrollHeight, 128)}px`;
+    }
+  };
 
   // Scroll to bottom when messages update
   useEffect(() => {
@@ -67,9 +77,9 @@ export default function Chatbot() {
       </button>
 
       {open && (
-        <div className="fixed bottom-0 left-0 right-0 top-0 w-full h-full bg-white/95 border-t-2 border-maroon-700 rounded-none shadow-2xl flex flex-col z-50 font-inter animate-fade-in backdrop-blur-xs px-0 py-0 md:bottom-8 md:right-8 md:left-auto md:top-auto md:w-128 md:h-auto md:rounded-2xl md:border-2 md:px-0 md:py-0">
+        <div className="fixed left-0 right-0 bottom-0 w-full h-full bg-white/95 rounded-none shadow-2xl flex flex-col z-50 font-inter animate-fade-in backdrop-blur-xs px-0 py-0 md:bottom-8 md:right-8 md:left-auto md:top-auto md:w-128 md:h-auto md:rounded-2xl md:border-2 md:px-0 md:py-0">
           <div className="flex items-center justify-between px-4 py-3 bg-maroon-700 rounded-t-none md:rounded-t-2xl">
-            <span className="font-bold text-white text-lg md:text-lg text-base">
+            <span className="font-bold text-white md:text-lg text-base">
               AcademiTrends Chatbot
             </span>
             <button
@@ -139,18 +149,27 @@ export default function Chatbot() {
               </div>
             )}
           </div>
-          <div className="flex items-center justify-between gap-1 border-t p-2 bg-white/80 rounded-b-none md:rounded-b-2xl">
-            <input
-              className="flex-1 px-2 py-2 rounded-xl border border-maroon-200 outline-none text-sm bg-maroon-50/40"
-              type="text"
+          <div className="flex items-end justify-between gap-1 border-t p-2 bg-white/80 rounded-b-none md:rounded-b-2xl">
+            <textarea
+              ref={textareaRef}
+              className="flex-1 px-2 py-2 rounded-xl border border-maroon-200 outline-none text-sm bg-maroon-50/40 resize-none min-h-[3rem] max-h-32"
               placeholder="Ask your question…"
               value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && sendMessage()}
+              onChange={(e) => {
+                setInput(e.target.value);
+                adjustTextareaHeight();
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
+                  sendMessage();
+                }
+              }}
               disabled={loading}
+              rows={1}
             />
             <button
-              className="bg-maroon-700 text-white px-3 py-2 rounded-xl font-semibold text-sm hover:bg-maroon-800 transition cursor-pointer"
+              className="bg-maroon-700 text-white px-3 py-2 rounded-xl font-semibold text-sm hover:bg-maroon-800 transition cursor-pointer min-h-[3rem]"
               onClick={sendMessage}
               disabled={loading || !input.trim()}
             >
