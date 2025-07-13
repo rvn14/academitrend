@@ -11,6 +11,16 @@ export default function Chatbot() {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  // Auto-resize textarea
+  const adjustTextareaHeight = () => {
+    const textarea = textareaRef.current;
+    if (textarea) {
+      textarea.style.height = "auto";
+      textarea.style.height = `${Math.min(textarea.scrollHeight, 128)}px`;
+    }
+  };
 
   // Scroll to bottom when messages update
   useEffect(() => {
@@ -48,9 +58,9 @@ export default function Chatbot() {
     <>
       {/* Floating Button */}
       <button
-        className={`fixed bottom-8 right-8 z-50 bg-maroon-700 hover:bg-maroon-800 text-white rounded-full shadow-lg p-4 flex items-center transition-all cursor-pointer ${
+        className={`fixed bottom-6 right-6 z-50 bg-maroon-700 hover:bg-maroon-800 text-white rounded-full shadow-lg p-4 flex items-center transition-all cursor-pointer ${
           open ? "hidden" : ""
-        }`}
+        } md:bottom-8 md:right-8`}
         aria-label="Open Chatbot"
         onClick={() => setOpen(true)}
       >
@@ -66,11 +76,10 @@ export default function Chatbot() {
         <span className="ml-2 font-semibold hidden md:inline">Chat</span>
       </button>
 
-      
       {open && (
-        <div className="fixed bottom-8 right-8 w-128 bg-white/95 border-2 border-maroon-700 rounded-2xl shadow-2xl flex flex-col z-50 font-inter animate-fade-in backdrop-blur-xs">
-          <div className="flex items-center justify-between px-4 py-3 bg-maroon-700 rounded-t-2xl">
-            <span className="font-bold text-white text-lg">
+        <div className="fixed left-0 right-0 bottom-0 w-full h-full bg-white/95 rounded-none shadow-2xl flex flex-col z-50 font-inter animate-fade-in backdrop-blur-xs px-0 py-0 md:bottom-8 md:right-8 md:left-auto md:top-auto md:w-128 md:h-auto md:rounded-2xl md:border-2 md:px-0 md:py-0">
+          <div className="flex items-center justify-between px-4 py-3 bg-maroon-700 rounded-t-none md:rounded-t-2xl">
+            <span className="font-bold text-white md:text-lg text-base">
               AcademiTrends Chatbot
             </span>
             <button
@@ -88,13 +97,8 @@ export default function Chatbot() {
               </svg>
             </button>
           </div>
-          {/* Message container: fixed height and scrollable */}
           <div
-            className="overflow-y-auto p-3 space-y-2 h-128"
-            style={{
-              background: "rgba(127, 29, 29, 0.08)",
-              // height: "18rem", // h-72 is 18rem in Tailwind
-            }}
+            className="overflow-y-auto p-2 space-y-2 h-[calc(100vh-8rem)] md:h-128 bg-[rgba(127,29,29,0.08)]"
           >
             {messages.length === 0 && (
               <div className="text-maroon-700 text-center mt-8 text-base">
@@ -145,18 +149,27 @@ export default function Chatbot() {
               </div>
             )}
           </div>
-          <div className="flex border-t p-2 bg-white/80 rounded-b-2xl">
-            <input
-              className="flex-1 px-2 py-1 rounded-xl border border-maroon-200 mr-2 outline-none text-sm bg-maroon-50/40"
-              type="text"
+          <div className="flex items-end justify-between gap-1 border-t p-2 bg-white/80 rounded-b-none md:rounded-b-2xl">
+            <textarea
+              ref={textareaRef}
+              className="flex-1 px-2 py-2 rounded-xl border border-maroon-200 outline-none text-sm bg-maroon-50/40 resize-none min-h-[3rem] max-h-32"
               placeholder="Ask your question…"
               value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && sendMessage()}
+              onChange={(e) => {
+                setInput(e.target.value);
+                adjustTextareaHeight();
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
+                  sendMessage();
+                }
+              }}
               disabled={loading}
+              rows={1}
             />
             <button
-              className="bg-maroon-700 text-white px-3 py-1 rounded-xl font-semibold text-sm hover:bg-maroon-800 transition"
+              className="bg-maroon-700 text-white px-3 py-2 rounded-xl font-semibold text-sm hover:bg-maroon-800 transition cursor-pointer min-h-[3rem]"
               onClick={sendMessage}
               disabled={loading || !input.trim()}
             >
@@ -178,6 +191,11 @@ export default function Chatbot() {
           to {
             opacity: 1;
             transform: translateY(0);
+          }
+        }
+        @media (max-width: 768px) {
+          .font-inter {
+            font-size: 15px;
           }
         }
       `}</style>

@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
   try {
    
     const completion = await openai.chat.completions.create({
-      model: "openai/gpt-4.1",
+      model: "anthropic/claude-sonnet-4",
       messages: [
         {
           role: "system",
@@ -53,6 +53,9 @@ When possible, base your answers on data from the following official Sri Lankan 
 
 If you do not know an answer for certain, politely suggest the user visit these official websites for the latest details.
 Always cite or reference these sites when relevant.
+
+Always respond in a friendly, professional tone. Use Markdown formatting for clarity, such as:
+use markdown for code blocks, lists, heading and every URLs.
 
 ---
 
