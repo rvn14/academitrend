@@ -83,7 +83,7 @@ export default function Chatbot() {
               AcademiTrends Chatbot
             </span>
             <button
-              className="text-white hover:text-maroon-100 transition"
+              className="text-white hover:text-maroon-100 transition cursor-pointer"
               aria-label="Close Chatbot"
               onClick={() => setOpen(false)}
             >
