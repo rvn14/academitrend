@@ -13,7 +13,7 @@ export default function Footer() {
           <span className="text-xl font-bold text-gray-900">ACADEMITREND</span>
         </div>
         
-        <nav className="flex flex-wrap gap-6 text-sm">
+        <nav className="hidden md:flex flex-wrap gap-6 text-sm">
           <Link href="/" className="text-maroon-700 hover:text-maroon-800 font-medium">Home</Link>
           <Link href="/universities" className="text-gray-600 hover:text-maroon-700">Universities</Link>
           <Link href="/programs" className="text-gray-600 hover:text-maroon-700">Programs</Link>

@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
   try {
    
     const completion = await openai.chat.completions.create({
-      model: "anthropic/claude-sonnet-4",
+      model: "openai/gpt-4.1",
       messages: [
         {
           role: "system",
