@@ -31,13 +31,13 @@ const CareerPage = ({ params }: CareerPageProps) => {
             {program.duration}
           </div>
           <div className="flex items-center justify-center h-full">
-            <div className="w-46 aspect-square bg-white rounded-full flex items-center justify-center overflow-hidden">
+            <div className="w-48 h-48 bg-white rounded-full flex items-center justify-center overflow-hidden">
               <Image
                 src={program.campusLogo}
                 alt="logo"
-                width={170}
-                height={170}
-                className="object-contain object-center rounded-full"
+                width={120}
+                height={120}
+                className="object-contain object-center w-full h-full p-2"
               />
             </div>
           </div>
@@ -56,16 +56,14 @@ const CareerPage = ({ params }: CareerPageProps) => {
           </h3>
 
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 rounded-full bg-maroon-100 flex items-center justify-center">
-              <span className="text-xs font-bold text-maroon-700">
-                <Image
+            <div className="w-8 h-8 rounded-full bg-maroon-100 flex items-center justify-center overflow-hidden">
+              <Image
                 src={program.campusLogo}
                 alt={`logo`}
-                width={250}
-                height={250}
-                className="rounded-full object-cover object-center"
+                width={32}
+                height={32}
+                className="w-full h-full object-contain object-center"
               />
-              </span>
             </div>
             <span className="text-sm font-medium text-gray-700">{program.university}</span>
           </div>
@@ -73,6 +71,17 @@ const CareerPage = ({ params }: CareerPageProps) => {
           <p className="text-sm text-gray-600 mb-4 line-clamp-2 leading-relaxed flex-1">
             {program.description}
           </p>
+
+          <div className="flex items-center gap-3 mb-4">
+            {program.streams?.map((tag, index) => (
+              <span
+                key={index}
+                className="bg-maroon-50 text-maroon-700 px-2 py-1 rounded-md text-xs font-medium"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
 
           <div className="flex items-center justify-between mt-auto">
             <div className="bg-maroon-700 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-maroon-800 transition-colors duration-200 flex items-center gap-1">
@@ -107,7 +116,7 @@ const CareerPage = ({ params }: CareerPageProps) => {
             </nav>
 
             <button className="bg-maroon-700 text-white px-6 py-2 rounded-full hover:bg-maroon-800 transition-colors">
-              Get Started
+              Salary Prediction
             </button>
           </div>
         </div>

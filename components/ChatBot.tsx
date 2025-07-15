@@ -152,7 +152,7 @@ export default function Chatbot() {
           <div className="flex items-end justify-between gap-1 border-t p-2 bg-white/80 rounded-b-none md:rounded-b-2xl">
             <textarea
               ref={textareaRef}
-              className="flex-1 px-2 py-2 rounded-xl border border-maroon-200 outline-none text-sm bg-maroon-50/40 resize-none min-h-[3rem] max-h-32"
+              className="flex-1 items-center px-3 py-2 rounded-xl border border-maroon-200 outline-none text-sm bg-maroon-50/40 resize-none min-h-[2.5rem] max-h-32"
               placeholder="Ask your question…"
               value={input}
               onChange={(e) => {
@@ -169,7 +169,7 @@ export default function Chatbot() {
               rows={1}
             />
             <button
-              className="bg-maroon-700 text-white px-3 py-2 rounded-xl font-semibold text-sm hover:bg-maroon-800 transition cursor-pointer min-h-[3rem]"
+              className="bg-maroon-700 text-white px-3 py-2 rounded-xl font-semibold text-sm hover:bg-maroon-800 transition cursor-pointer min-h-[2.5rem]"
               onClick={sendMessage}
               disabled={loading || !input.trim()}
             >
@@ -178,7 +178,10 @@ export default function Chatbot() {
           </div>
         </div>
       )}
-      {/* Fade-in animation */}
+      
+
+
+
       <style jsx>{`
         .animate-fade-in {
           animation: fadeIn 0.25s ease;

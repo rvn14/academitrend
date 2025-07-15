@@ -39,7 +39,13 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uom-logo.png',
     description: 'Mechanics, energy systems, manufacturing, and robotics.',
-    enrollLink: '/enroll/mech-eng-uom'
+    enrollLink: '/enroll/mech-eng-uom',
+    pathways: [
+      { name: 'Manufacturing', icon: 'Factory', description: 'Production, CAD/CAM, quality.' },
+      { name: 'Thermal & Fluids', icon: 'Flame', description: 'Energy, thermodynamics, HVAC.' },
+      { name: 'Mechatronics', icon: 'Bot', description: 'Automation, robotics, control.' },
+      { name: 'Mechanical Design', icon: 'Settings', description: 'Design and simulation.' }
+    ]
   },
   {
     id: '3',
@@ -49,7 +55,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uom-logo.png',
     description: 'Power systems, electrical machines, electronics, and automation.',
-    enrollLink: '/enroll/electrical-eng-uom'
+    enrollLink: '/enroll/electrical-eng-uom',
+    pathways: [
+      { name: 'Power Systems', icon: 'Zap', description: 'Power generation, transmission, distribution.' },
+      { name: 'Electronics', icon: 'Cpu', description: 'Circuits, digital & analog electronics.' },
+      { name: 'Control Systems', icon: 'Gauge', description: 'Automation, process control.' }
+    ]
   },
   {
     id: '4',
@@ -59,7 +70,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uom-logo.png',
     description: 'Signals, communication networks, embedded systems, and digital electronics.',
-    enrollLink: '/enroll/entc-eng-uom'
+    enrollLink: '/enroll/entc-eng-uom',
+    pathways: [
+      { name: 'Telecommunications', icon: 'Radio', description: 'Networking, wireless, optical.' },
+      { name: 'Signal Processing', icon: 'Waveform', description: 'Audio, video, and comms signals.' },
+      { name: 'Embedded Systems', icon: 'Microchip', description: 'IoT, hardware/software integration.' }
+    ]
   },
   {
     id: '5',
@@ -69,7 +85,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uom-logo.png',
     description: 'Software, hardware, networking, algorithms, and intelligent systems.',
-    enrollLink: '/enroll/cse-uom'
+    enrollLink: '/enroll/cse-uom',
+    pathways: [
+      { name: 'Software Engineering', icon: 'Code', description: 'Programming, software systems.' },
+      { name: 'Hardware & Embedded', icon: 'Microchip', description: 'IoT, robotics.' },
+      { name: 'AI & Data Science', icon: 'BrainCircuit', description: 'Machine learning, big data.' }
+    ]
   },
   {
     id: '6',
@@ -79,7 +100,11 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uom-logo.png',
     description: 'Chemical industries, process design, polymers, and environmental tech.',
-    enrollLink: '/enroll/chem-eng-uom'
+    enrollLink: '/enroll/chem-eng-uom',
+    pathways: [
+      { name: 'Process Engineering', icon: 'Beaker', description: 'Chemical plants and design.' },
+      { name: 'Environmental', icon: 'Leaf', description: 'Waste, water, sustainability.' }
+    ]
   },
   {
     id: '7',
@@ -89,7 +114,11 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uom-logo.png',
     description: 'Materials, nanotechnology, polymers, ceramics, and metallurgy.',
-    enrollLink: '/enroll/materials-eng-uom'
+    enrollLink: '/enroll/materials-eng-uom',
+    pathways: [
+      { name: 'Nanotechnology', icon: 'Cube', description: 'Nano-materials, polymers.' },
+      { name: 'Metallurgy', icon: 'Hammer', description: 'Metallic materials, alloys.' }
+    ]
   },
   {
     id: '8',
@@ -99,7 +128,11 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uom-logo.png',
     description: 'Mining, minerals, geology, and environmental resources.',
-    enrollLink: '/enroll/earth-eng-uom'
+    enrollLink: '/enroll/earth-eng-uom',
+    pathways: [
+      { name: 'Mining Engineering', icon: 'Mountain', description: 'Mining, minerals, geology.' },
+      { name: 'Geo-Environmental', icon: 'Leaf', description: 'Earth resources and sustainability.' }
+    ]
   },
   {
     id: '9',
@@ -109,7 +142,11 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uom-logo.png',
     description: 'Textile materials, apparel manufacturing, fashion technology.',
-    enrollLink: '/enroll/textile-eng-uom'
+    enrollLink: '/enroll/textile-eng-uom',
+    pathways: [
+      { name: 'Apparel Production', icon: 'TShirt', description: 'Production, merchandising, technology.' },
+      { name: 'Textile Technology', icon: 'Factory', description: 'Yarns, fabrics, finishing.' }
+    ]
   },
   {
     id: '10',
@@ -119,7 +156,11 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uom-logo.png',
     description: 'Transport systems, supply chain, and logistics management.',
-    enrollLink: '/enroll/transport-eng-uom'
+    enrollLink: '/enroll/transport-eng-uom',
+    pathways: [
+      { name: 'Transport Systems', icon: 'Car', description: 'Public transport, traffic.' },
+      { name: 'Logistics', icon: 'Truck', description: 'Supply chain, operations.' }
+    ]
   },
 
   // University of Peradeniya
@@ -131,7 +172,14 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/pera-logo.png',
     description: 'Study at Sri Lanka’s oldest engineering faculty. Select a stream after the first year.',
-    enrollLink: '/enroll/eng-pera'
+    enrollLink: '/enroll/eng-pera',
+    pathways: [
+      { name: 'Civil Engineering', icon: 'Building2', description: 'Structures, water, geo, transportation.' },
+      { name: 'Mechanical Engineering', icon: 'Settings', description: 'Design, thermal, manufacturing.' },
+      { name: 'Electrical & Electronic', icon: 'Zap', description: 'Power, electronics, telecom.' },
+      { name: 'Chemical & Process', icon: 'Beaker', description: 'Chemical, environmental, process.' },
+      { name: 'Computer Engineering', icon: 'Cpu', description: 'Hardware, software, systems.' }
+    ]
   },
 
   // University of Ruhuna
@@ -143,7 +191,13 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/ruhuna-logo.jpeg',
     description: 'Modern curriculum and project-based learning in major engineering branches.',
-    enrollLink: '/enroll/eng-ruhuna'
+    enrollLink: '/enroll/eng-ruhuna',
+    pathways: [
+      { name: 'Civil Engineering', icon: 'Building', description: 'Structures, water, transportation.' },
+      { name: 'Mechanical Engineering', icon: 'Settings', description: 'Machines, manufacturing, energy.' },
+      { name: 'Electrical & Information Engineering', icon: 'Zap', description: 'Electrical, electronics, info systems.' },
+      { name: 'Computer Engineering', icon: 'Cpu', description: 'Computer systems, hardware/software.' }
+    ]
   },
 
   // University of Jaffna
@@ -155,7 +209,14 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/jaffna-logo.png',
     description: 'Civil, mechanical, electrical & electronic, computer, and chemical engineering options.',
-    enrollLink: '/enroll/eng-jaffna'
+    enrollLink: '/enroll/eng-jaffna',
+    pathways: [
+      { name: 'Civil Engineering', icon: 'Building', description: 'Structures, water, transportation.' },
+      { name: 'Mechanical Engineering', icon: 'Settings', description: 'Machines, energy, design.' },
+      { name: 'Electrical & Electronic', icon: 'Zap', description: 'Circuits, systems, telecom.' },
+      { name: 'Computer Engineering', icon: 'Cpu', description: 'Hardware, embedded, software.' },
+      { name: 'Chemical Engineering', icon: 'Beaker', description: 'Process, chemical industries.' }
+    ]
   },
 
   // Sabaragamuwa University of Sri Lanka
@@ -167,7 +228,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/sabaragamuwa.png',
     description: 'Newest faculty offering core engineering programs with strong industry ties.',
-    enrollLink: '/enroll/eng-sab'
+    enrollLink: '/enroll/eng-sab',
+    pathways: [
+      { name: 'Civil Engineering', icon: 'Building', description: 'Infrastructure, water, structures.' },
+      { name: 'Mechanical Engineering', icon: 'Settings', description: 'Thermal, design, manufacturing.' },
+      { name: 'Electrical & Electronic', icon: 'Zap', description: 'Power, electronics.' }
+    ]
   },
 
   // Eastern University (Trincomalee Campus)
@@ -179,7 +245,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/eastern.png',
     description: 'Technology-focused degree in engineering disciplines for the Eastern Province.',
-    enrollLink: '/enroll/btech-eng-eastern'
+    enrollLink: '/enroll/btech-eng-eastern',
+    pathways: [
+      { name: 'Civil', icon: 'Building', description: 'Structures, highways, water.' },
+      { name: 'Mechanical', icon: 'Settings', description: 'Manufacturing, automation.' },
+      { name: 'Electrical', icon: 'Zap', description: 'Power, electronics.' }
+    ]
   },
 
   // University of Vavuniya
@@ -191,7 +262,11 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/vavuniya.png',
     description: 'Industrial, process, and production engineering for industry-focused careers.',
-    enrollLink: '/enroll/industrial-eng-vavuniya'
+    enrollLink: '/enroll/industrial-eng-vavuniya',
+    pathways: [
+      { name: 'Industrial Engineering', icon: 'Factory', description: 'Manufacturing, operations, optimization.' },
+      { name: 'Process Engineering', icon: 'Beaker', description: 'Plant design, process control.' }
+    ]
   }
 ]
 ,
@@ -401,7 +476,13 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uoc-logo.png',
     description: 'Premier MBBS program with clinical training at National Hospital. Strong research, clinical, and community medicine.',
-    enrollLink: '/enroll/mbbs-colombo'
+    enrollLink: '/enroll/mbbs-colombo',
+    pathways: [
+      { name: 'Internal Medicine', icon: 'Stethoscope', description: 'Diagnosis and treatment of adult diseases.' },
+      { name: 'Surgery', icon: 'Scissors', description: 'Surgical procedures and operative medicine.' },
+      { name: 'Pediatrics', icon: 'Baby', description: 'Medical care for infants, children, and teens.' },
+      { name: 'Community Medicine', icon: 'Globe', description: 'Public health, prevention, and epidemiology.' }
+    ]
   },
   {
     id: '2',
@@ -412,7 +493,13 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/pera-logo.png',
     description: 'MBBS with hands-on experience at Peradeniya Teaching Hospital. Strong focus on all core medical specialties.',
-    enrollLink: '/enroll/mbbs-peradeniya'
+    enrollLink: '/enroll/mbbs-peradeniya',
+    pathways: [
+      { name: 'General Medicine', icon: 'Stethoscope', description: 'Core clinical rotations and internal medicine.' },
+      { name: 'Surgery', icon: 'Scissors', description: 'Operative and surgical specialties.' },
+      { name: 'Obstetrics & Gynaecology', icon: 'Heart', description: 'Women’s health, pregnancy, childbirth.' },
+      { name: 'Psychiatry', icon: 'Brain', description: 'Mental health and behavioral sciences.' }
+    ]
   },
   {
     id: '3',
@@ -423,7 +510,13 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/sjp-logo.png',
     description: 'MBBS degree offering extensive clinical training and community health exposure.',
-    enrollLink: '/enroll/mbbs-sjp'
+    enrollLink: '/enroll/mbbs-sjp',
+    pathways: [
+      { name: 'Internal Medicine', icon: 'Stethoscope', description: 'Comprehensive clinical medicine.' },
+      { name: 'Surgery', icon: 'Scissors', description: 'General and specialty surgical training.' },
+      { name: 'Pediatrics', icon: 'Baby', description: 'Child and adolescent health.' },
+      { name: 'Family Medicine', icon: 'Users', description: 'Primary care and general practice.' }
+    ]
   },
   {
     id: '4',
@@ -434,7 +527,13 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uok-logo.png',
     description: 'Medical program with focus on research, modern diagnostics, and clinical skills.',
-    enrollLink: '/enroll/mbbs-kelaniya'
+    enrollLink: '/enroll/mbbs-kelaniya',
+    pathways: [
+      { name: 'Internal Medicine', icon: 'Stethoscope', description: 'Adult medicine and chronic disease management.' },
+      { name: 'Surgery', icon: 'Scissors', description: 'General surgery and sub-specialties.' },
+      { name: 'Psychiatry', icon: 'Brain', description: 'Psychological and mental health care.' },
+      { name: 'Community Health', icon: 'Globe', description: 'Preventive medicine and public health.' }
+    ]
   },
   {
     id: '5',
@@ -445,7 +544,13 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/jaffna-logo.png',
     description: 'Comprehensive medical degree with early clinical exposure and rural healthcare focus.',
-    enrollLink: '/enroll/mbbs-jaffna'
+    enrollLink: '/enroll/mbbs-jaffna',
+    pathways: [
+      { name: 'General Medicine', icon: 'Stethoscope', description: 'Full-spectrum medicine.' },
+      { name: 'Pediatrics', icon: 'Baby', description: 'Care for children and neonates.' },
+      { name: 'Surgery', icon: 'Scissors', description: 'Surgical and trauma care.' },
+      { name: 'Community Medicine', icon: 'Globe', description: 'Health promotion and public health.' }
+    ]
   },
   {
     id: '6',
@@ -456,7 +561,13 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/ruhuna-logo.jpeg',
     description: 'MBBS with emphasis on tropical medicine, clinical training, and outreach.',
-    enrollLink: '/enroll/mbbs-ruhuna'
+    enrollLink: '/enroll/mbbs-ruhuna',
+    pathways: [
+      { name: 'Internal Medicine', icon: 'Stethoscope', description: 'Adult and geriatric medicine.' },
+      { name: 'Emergency Medicine', icon: 'Ambulance', description: 'Acute care, ER skills.' },
+      { name: 'Surgery', icon: 'Scissors', description: 'Surgical principles and operative medicine.' },
+      { name: 'Rural Medicine', icon: 'Map', description: 'Primary care in rural settings.' }
+    ]
   },
   {
     id: '7',
@@ -467,7 +578,13 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/eastern.png',
     description: 'Well-rounded MBBS with modern curriculum and clinical placements.',
-    enrollLink: '/enroll/mbbs-eastern'
+    enrollLink: '/enroll/mbbs-eastern',
+    pathways: [
+      { name: 'General Medicine', icon: 'Stethoscope', description: 'Foundations in clinical medicine.' },
+      { name: 'Obstetrics & Gynae', icon: 'Heart', description: 'Women’s health, maternity.' },
+      { name: 'Paediatrics', icon: 'Baby', description: 'Children’s diseases and care.' },
+      { name: 'Public Health', icon: 'Globe', description: 'Epidemiology, disease prevention.' }
+    ]
   },
   {
     id: '8',
@@ -478,7 +595,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/rajarata.png',
     description: 'Medical training with focus on rural, family, and preventive medicine.',
-    enrollLink: '/enroll/mbbs-rajarata'
+    enrollLink: '/enroll/mbbs-rajarata',
+    pathways: [
+      { name: 'Family Medicine', icon: 'Users', description: 'Primary healthcare, GP practice.' },
+      { name: 'Internal Medicine', icon: 'Stethoscope', description: 'Adult disease management.' },
+      { name: 'Community Health', icon: 'Globe', description: 'Population health, screening.' }
+    ]
   },
   {
     id: '9',
@@ -489,7 +611,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/wayamba.png',
     description: 'Newest state MBBS with modern facilities, clinical, and community training.',
-    enrollLink: '/enroll/mbbs-wayamba'
+    enrollLink: '/enroll/mbbs-wayamba',
+    pathways: [
+      { name: 'General Medicine', icon: 'Stethoscope', description: 'Clinical and academic medicine.' },
+      { name: 'Paediatrics', icon: 'Baby', description: 'Children’s care.' },
+      { name: 'Public Health', icon: 'Globe', description: 'Health education, disease prevention.' }
+    ]
   },
   {
     id: '10',
@@ -500,7 +627,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/pera-logo.png',
     description: 'Sri Lanka’s leading dental surgery degree with clinical skills, orthodontics, and oral surgery.',
-    enrollLink: '/enroll/bds-pera'
+    enrollLink: '/enroll/bds-pera',
+    pathways: [
+      { name: 'Oral Surgery', icon: 'Scissors', description: 'Dental surgery, extractions, maxillofacial.' },
+      { name: 'Orthodontics', icon: 'Smile', description: 'Alignment, braces, and dental aesthetics.' },
+      { name: 'Paediatric Dentistry', icon: 'Baby', description: 'Children’s dental care.' }
+    ]
   },
   {
     id: '11',
@@ -511,7 +643,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/sjp-logo.png',
     description: 'Modern dental curriculum with practical skills and community dental care.',
-    enrollLink: '/enroll/bds-sjp'
+    enrollLink: '/enroll/bds-sjp',
+    pathways: [
+      { name: 'Clinical Dentistry', icon: 'Scissors', description: 'Restorative, periodontics, prosthetics.' },
+      { name: 'Oral Medicine', icon: 'BookOpen', description: 'Oral diagnosis and pathology.' },
+      { name: 'Community Dentistry', icon: 'Globe', description: 'Public dental health initiatives.' }
+    ]
   },
   {
     id: '12',
@@ -522,7 +659,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/pera-logo.png',
     description: 'Veterinary medicine program with animal hospital and fieldwork experience.',
-    enrollLink: '/enroll/vet-pera'
+    enrollLink: '/enroll/vet-pera',
+    pathways: [
+      { name: 'Small Animal Practice', icon: 'Cat', description: 'Care for pets and domestic animals.' },
+      { name: 'Large Animal Practice', icon: 'Cow', description: 'Livestock and farm animal health.' },
+      { name: 'Wildlife Medicine', icon: 'Bird', description: 'Conservation, exotics, and research.' }
+    ]
   }
 ],
   'business': [
@@ -535,7 +677,13 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uoc-logo.png',
     description: 'Flagship BBA program focused on management, finance, marketing, HR, and entrepreneurship.',
-    enrollLink: '/enroll/bba-colombo'
+    enrollLink: '/enroll/bba-colombo',
+    pathways: [
+      { name: 'Management', icon: 'Users', description: 'Business strategy, organizational leadership.' },
+      { name: 'Marketing', icon: 'Megaphone', description: 'Branding, consumer research, digital marketing.' },
+      { name: 'Finance', icon: 'DollarSign', description: 'Financial management, accounting, investment.' },
+      { name: 'HRM', icon: 'UserCheck', description: 'Human resource management, people analytics.' }
+    ]
   },
   // BBA - SJP
   {
@@ -546,7 +694,13 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/sjp-logo.png',
     description: 'Top BBA program with specializations in operations, entrepreneurship, and international business.',
-    enrollLink: '/enroll/bba-sjp'
+    enrollLink: '/enroll/bba-sjp',
+    pathways: [
+      { name: 'Operations Management', icon: 'Settings', description: 'Supply chain, logistics, quality control.' },
+      { name: 'Entrepreneurship', icon: 'Lightbulb', description: 'Innovation, startups, venture creation.' },
+      { name: 'International Business', icon: 'Globe', description: 'Cross-border trade, export/import.' },
+      { name: 'Business Analytics', icon: 'BarChart3', description: 'Data-driven decision making.' }
+    ]
   },
   // BBA - Kelaniya
   {
@@ -557,7 +711,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uok-logo.png',
     description: 'Modern business degree with electives in marketing, HR, finance, and business IT.',
-    enrollLink: '/enroll/bba-kelaniya'
+    enrollLink: '/enroll/bba-kelaniya',
+    pathways: [
+      { name: 'Finance', icon: 'DollarSign', description: 'Corporate finance, banking, accounting.' },
+      { name: 'Marketing', icon: 'Megaphone', description: 'Digital, international, and services marketing.' },
+      { name: 'Business IT', icon: 'Monitor', description: 'Information systems and tech for managers.' }
+    ]
   },
   // BMS - OUSL
   {
@@ -568,7 +727,11 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/open.png',
     description: 'Flexible management program for working students, covering business, law, and entrepreneurship.',
-    enrollLink: '/enroll/bms-ousl'
+    enrollLink: '/enroll/bms-ousl',
+    pathways: [
+      { name: 'General Management', icon: 'Users', description: 'Core business skills and leadership.' },
+      { name: 'Business Law', icon: 'Scale', description: 'Commercial and corporate law basics.' }
+    ]
   },
   // MBA - SJP (postgrad)
   {
@@ -579,7 +742,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Postgraduate',
     campusLogo: '/images/universities/sjp-logo.png',
     description: 'Top MBA with strong links to industry, research, and case-study learning.',
-    enrollLink: '/enroll/mba-sjp'
+    enrollLink: '/enroll/mba-sjp',
+    pathways: [
+      { name: 'Strategic Management', icon: 'Target', description: 'High-level leadership and business strategy.' },
+      { name: 'Digital Business', icon: 'Smartphone', description: 'Digital transformation, e-commerce.' },
+      { name: 'Innovation', icon: 'Lightbulb', description: 'New product/service development.' }
+    ]
   },
   // BCom - Kelaniya
   {
@@ -590,7 +758,13 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uok-logo.png',
     description: 'Sri Lanka’s most established BCom. Focus on accounting, business law, finance, and economics.',
-    enrollLink: '/enroll/bcom-kelaniya'
+    enrollLink: '/enroll/bcom-kelaniya',
+    pathways: [
+      { name: 'Accounting', icon: 'Calculator', description: 'Financial, management, and cost accounting.' },
+      { name: 'Banking & Finance', icon: 'CreditCard', description: 'Banking operations, investments, insurance.' },
+      { name: 'Business Law', icon: 'Scale', description: 'Commercial law, regulatory compliance.' },
+      { name: 'Economics', icon: 'TrendingUp', description: 'Micro, macro, and international economics.' }
+    ]
   },
   // BCom - SJP
   {
@@ -601,7 +775,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/sjp-logo.png',
     description: 'Comprehensive commerce degree with electives in business analytics, accounting, and tax.',
-    enrollLink: '/enroll/bcom-sjp'
+    enrollLink: '/enroll/bcom-sjp',
+    pathways: [
+      { name: 'Accounting', icon: 'Calculator', description: 'Financial, cost, and forensic accounting.' },
+      { name: 'Taxation', icon: 'FileText', description: 'Corporate tax, compliance.' },
+      { name: 'Business Analytics', icon: 'BarChart3', description: 'Data and decision analytics.' }
+    ]
   },
   // Business Finance - Colombo
   {
@@ -612,7 +791,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uoc-logo.png',
     description: 'Industry-focused finance degree with strong quantitative skills, risk management, and capital markets.',
-    enrollLink: '/enroll/finance-colombo'
+    enrollLink: '/enroll/finance-colombo',
+    pathways: [
+      { name: 'Corporate Finance', icon: 'DollarSign', description: 'Financial management for businesses.' },
+      { name: 'Risk Management', icon: 'Shield', description: 'Credit, operational, and market risk.' },
+      { name: 'Capital Markets', icon: 'TrendingUp', description: 'Stock, bonds, and investment banking.' }
+    ]
   },
   // Accountancy - SJP
   {
@@ -623,279 +807,76 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/sjp-logo.png',
     description: 'Specialized degree for professional accountants, with training in audit, taxation, and corporate reporting.',
-    enrollLink: '/enroll/accountancy-sjp'
+    enrollLink: '/enroll/accountancy-sjp',
+    pathways: [
+      { name: 'Audit', icon: 'CheckCircle', description: 'External and internal audit.' },
+      { name: 'Taxation', icon: 'FileText', description: 'Tax planning and management.' },
+      { name: 'Corporate Reporting', icon: 'Clipboard', description: 'Financial reporting, compliance.' }
+    ]
   }
 ],
-  'technology': [
-  // Kelaniya – Engineering Technology added
-  {
-    id: '6',
-    title: 'Bachelor of Engineering Technology (Honours)',
-    university: 'University of Kelaniya',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/uok-logo.png',
-    description: 'Applied engineering degree for Tech‑stream students—hands‑on, industry focused, with majors in Materials, Robotics & Automation, and Environmental/Energy technologies.',
-    enrollLink: '/enroll/engtech-uok',
-    pathways: [
-      { name: 'Materials & Process Tech', icon: 'Cube', description: 'Material science, processing, industrial tech.' },
-      { name: 'Robotics & Automation', icon: 'Bot', description: 'Automation systems, robotics, industrial control.' },
-      { name: 'Environmental/Energy Tech', icon: 'Sun', description: 'Renewable energy systems, environmental tech.' }
-    ]
-  },
-  // Other Kelaniya stream degrees (ICT and Biosystems)
-  {
-    id: '5',
-    title: 'BSc (Hons) in Information & Communication Technology (ICT)',
-    university: 'University of Kelaniya',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/uok-logo.png',
-    description: 'ICT program with a focus on software, network, systems, and digital business.',
-    enrollLink: '/enroll/ict-uok',
-    pathways: [
-      { name: 'Software Development', icon: 'Code', description: 'Web, app, and cloud software.' },
-      { name: 'Networking', icon: 'Wifi', description: 'System admin, networking.' },
-      { name: 'IT Management', icon: 'Clipboard', description: 'Tech for business.' }
-    ]
-  },
-  {
-    id: '6b',
-    title: 'BSc Honours in Biosystems Technology',
-    university: 'University of Kelaniya',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/uok-logo.png',
-    description: 'Integrates biology, technology, and engineering for agriculture and biotech careers.',
-    enrollLink: '/enroll/biosys-uok',
-    pathways: [
-      { name: 'Agri Tech', icon: 'Leaf', description: 'Smart farming, food production.' },
-      { name: 'Bioprocessing', icon: 'Beaker', description: 'Food science, fermentation.' },
-      { name: 'Environmental Tech', icon: 'Globe', description: 'Sustainability, clean tech.' }
-    ]
-  },
-  // Moratuwa
+  'law': [
   {
     id: '1',
-    title: 'Bachelor of Technology (BTech) in Engineering',
-    university: 'University of Moratuwa',
+    title: 'Bachelor of Laws (LLB)',
+    university: 'University of Colombo',
     duration: '4 years',
     level: 'Undergraduate',
-    campusLogo: '/images/universities/uom-logo.png',
-    description: 'Technology-focused engineering degree with pathways in civil, mechanical, and electrical technology.',
-    enrollLink: '/enroll/btech-eng-uom',
+    campusLogo: '/images/universities/uoc-logo.png',
+    description: 'Sri Lanka’s flagship LLB program with comprehensive training in all major branches of law. Includes moot courts, research, and legal practice skills.',
+    enrollLink: '/enroll/llb-colombo',
     pathways: [
-      { name: 'Civil Technology', icon: 'Building', description: 'Construction, materials, and surveying.' },
-      { name: 'Mechanical Technology', icon: 'Settings', description: 'Machines, manufacturing, CAD.' },
-      { name: 'Electrical Technology', icon: 'Zap', description: 'Electrical systems, automation.' }
+      { name: 'Criminal Law', icon: 'Scale', description: 'Crime, prosecution, and defense law.' },
+      { name: 'Commercial Law', icon: 'Briefcase', description: 'Contracts, companies, business regulations.' },
+      { name: 'Constitutional Law', icon: 'Flag', description: 'Governance, rights, and public law.' },
+      { name: 'Human Rights Law', icon: 'Heart', description: 'Rights advocacy and international law.' }
     ]
   },
-  // Jayewardenepura
   {
     id: '2',
-    title: 'BSc Honours in Engineering Technology',
-    university: 'University of Sri Jayewardenepura',
+    title: 'Bachelor of Laws (LLB)',
+    university: 'University of Peradeniya',
     duration: '4 years',
     level: 'Undergraduate',
-    campusLogo: '/images/universities/sjp-logo.png',
-    description: 'Engineering Technology degree focused on applied engineering, design, and practical skills.',
-    enrollLink: '/enroll/engtech-sjp',
+    campusLogo: '/images/universities/pera-logo.png',
+    description: 'Full LLB with practical training, moot court, and legal clinic experience in a campus environment.',
+    enrollLink: '/enroll/llb-pera',
     pathways: [
-      { name: 'Manufacturing Technology', icon: 'Factory', description: 'Modern manufacturing, automation.' },
-      { name: 'Civil & Construction', icon: 'Building', description: 'Structures, infrastructure.' },
-      { name: 'Electrical Technology', icon: 'Zap', description: 'Electrical installations, electronics.' }
+      { name: 'Civil Law', icon: 'Home', description: 'Family, property, and civil litigation.' },
+      { name: 'International Law', icon: 'Globe', description: 'Transnational and global legal systems.' },
+      { name: 'Environmental Law', icon: 'Leaf', description: 'Sustainability and environmental protection.' },
+      { name: 'Corporate Law', icon: 'Building', description: 'Business law, mergers, governance.' }
     ]
   },
   {
     id: '3',
-    title: 'BSc Honours in Information & Communication Technology (ICT)',
-    university: 'University of Sri Jayewardenepura',
+    title: 'Bachelor of Laws (LLB)',
+    university: 'Open University of Sri Lanka',
     duration: '4 years',
     level: 'Undergraduate',
-    campusLogo: '/images/universities/sjp-logo.png',
-    description: 'Modern ICT degree with software, hardware, networking, and cloud.',
-    enrollLink: '/enroll/ict-sjp',
+    campusLogo: '/images/universities/open.png',
+    description: 'Accessible LLB for working students, covering all major law subjects and offering flexibility.',
+    enrollLink: '/enroll/llb-ousl',
     pathways: [
-      { name: 'Software Engineering', icon: 'Code', description: 'Programming, app development.' },
-      { name: 'Networking', icon: 'Wifi', description: 'Networks, cloud, cyber security.' },
-      { name: 'Information Systems', icon: 'Monitor', description: 'IT solutions for businesses.' }
+      { name: 'Criminal Law', icon: 'Scale', description: 'Crime, prosecution, and defense.' },
+      { name: 'Commercial Law', icon: 'Briefcase', description: 'Business and contract law.' },
+      { name: 'Public Law', icon: 'Flag', description: 'Constitutional, administrative law.' }
     ]
   },
   {
     id: '4',
-    title: 'BSc Honours in Biosystems Technology',
-    university: 'University of Sri Jayewardenepura',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/sjp-logo.png',
-    description: 'Tech meets biology: food, agriculture, environment, and applied biosciences.',
-    enrollLink: '/enroll/biosys-sjp',
+    title: 'Master of Laws (LLM)',
+    university: 'University of Colombo',
+    duration: '1 year',
+    level: 'Postgraduate',
+    campusLogo: '/images/universities/uoc-logo.png',
+    description: 'Advanced research degree for law graduates—focus on international, comparative, and commercial law.',
+    enrollLink: '/enroll/llm-colombo',
     pathways: [
-      { name: 'Agri Tech', icon: 'Leaf', description: 'Agricultural innovation, food technology.' },
-      { name: 'Bioprocessing', icon: 'Beaker', description: 'Biotech, food processing, fermentation.' },
-      { name: 'Environmental Tech', icon: 'Globe', description: 'Sustainable tech, waste management.' }
-    ]
-  },
-  // Ruhuna
-  {
-    id: '7',
-    title: 'BSc Honours in Information & Communication Technology (ICT)',
-    university: 'University of Ruhuna',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/ruhuna-logo.jpeg',
-    description: 'ICT program with a focus on coding, networking, and applied computing.',
-    enrollLink: '/enroll/ict-ruhuna',
-    pathways: [
-      { name: 'Software Engineering', icon: 'Code', description: 'Programming, SE.' },
-      { name: 'Network & Security', icon: 'Shield', description: 'Networking, cyber security.' },
-      { name: 'Business IT', icon: 'Monitor', description: 'Tech for industry.' }
-    ]
-  },
-  {
-    id: '8',
-    title: 'BSc Honours in Biosystems Technology',
-    university: 'University of Ruhuna',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/ruhuna-logo.jpeg',
-    description: 'Combines agriculture, biotechnology, and technology for next-gen bioscience careers.',
-    enrollLink: '/enroll/biosys-ruhuna',
-    pathways: [
-      { name: 'Bio Agri Tech', icon: 'Leaf', description: 'Biology-driven farming.' },
-      { name: 'Bio Processing', icon: 'Beaker', description: 'Bioprocess, food tech.' },
-      { name: 'Environmental Solutions', icon: 'Globe', description: 'Green tech, bio remediation.' }
-    ]
-  },
-  // Eastern (Trincomalee)
-  {
-    id: '9',
-    title: 'BTech (Hons) in Engineering',
-    university: 'Eastern University (Trincomalee Campus)',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/eastern.png',
-    description: 'Practice-driven engineering technology: civil, mechanical, electrical.',
-    enrollLink: '/enroll/btech-eng-eastern',
-    pathways: [
-      { name: 'Civil Technology', icon: 'Building', description: 'Building and construction.' },
-      { name: 'Mechanical Technology', icon: 'Settings', description: 'Automation and manufacturing.' },
-      { name: 'Electrical Technology', icon: 'Zap', description: 'Electrical systems and control.' }
-    ]
-  },
-  {
-    id: '10',
-    title: 'BSc Honours in Information & Communication Technology (ICT)',
-    university: 'Eastern University (Trincomalee Campus)',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/eastern.png',
-    description: 'ICT degree in Eastern Province: software, networks, and digital systems.',
-    enrollLink: '/enroll/ict-eastern',
-    pathways: [
-      { name: 'Software Engineering', icon: 'Code', description: 'Modern programming, app dev.' },
-      { name: 'Networking', icon: 'Wifi', description: 'Network admin, cyber security.' }
-    ]
-  },
-  {
-    id: '11',
-    title: 'BSc Honours in Biosystems Technology',
-    university: 'Eastern University (Trincomalee Campus)',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/eastern.png',
-    description: 'Agro-tech, biotech, and bioresource-focused technology degree.',
-    enrollLink: '/enroll/biosys-eastern',
-    pathways: [
-      { name: 'Agri Tech', icon: 'Leaf', description: 'Agro innovation, precision farming.' },
-      { name: 'Bioprocess', icon: 'Beaker', description: 'Bio-based manufacturing.' }
-    ]
-  },
-  // Sabaragamuwa
-  {
-    id: '12',
-    title: 'BSc Honours in Information & Communication Technology (ICT)',
-    university: 'Sabaragamuwa University of Sri Lanka',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/sabaragamuwa.png',
-    description: 'Prepares students for the digital future with ICT, coding, and applied systems.',
-    enrollLink: '/enroll/ict-sab',
-    pathways: [
-      { name: 'Software Engineering', icon: 'Code', description: 'Full-stack dev, SE.' },
-      { name: 'Networking', icon: 'Wifi', description: 'Admin, infrastructure, security.' }
-    ]
-  },
-  {
-    id: '13',
-    title: 'BSc Honours in Biosystems Technology',
-    university: 'Sabaragamuwa University of Sri Lanka',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/sabaragamuwa.png',
-    description: 'Technology for biosciences, sustainable agriculture, and bioprocessing.',
-    enrollLink: '/enroll/biosys-sab',
-    pathways: [
-      { name: 'Bio Agri Tech', icon: 'Leaf', description: 'Sustainable agri innovation.' },
-      { name: 'Bio Processing', icon: 'Beaker', description: 'Food and biotech process.' }
-    ]
-  },
-  // Uva Wellassa
-  {
-    id: '14',
-    title: 'Bachelor of Industrial Information Technology',
-    university: 'Uva Wellassa University',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/uva.jpg',
-    description: 'Applied IT for industry: automation, data, industrial informatics.',
-    enrollLink: '/enroll/ind-it-uwu',
-    pathways: [
-      { name: 'Automation', icon: 'Bot', description: 'Robotics, smart systems.' },
-      { name: 'Data Systems', icon: 'Database', description: 'Analytics, IT management.' }
-    ]
-  },
-  {
-    id: '15',
-    title: 'Bachelor of Science in Technology',
-    university: 'Uva Wellassa University',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/uva.jpg',
-    description: 'Multidisciplinary degree covering applied science, IT, and biosystems.',
-    enrollLink: '/enroll/tech-uwu',
-    pathways: [
-      { name: 'Applied IT', icon: 'Cpu', description: 'Programming, systems.' },
-      { name: 'Agro Tech', icon: 'Leaf', description: 'Modern farming, food science.' }
-    ]
-  },
-  // Vavuniya
-  {
-    id: '16',
-    title: 'BSc Honours in Information & Communication Technology (ICT)',
-    university: 'University of Vavuniya',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/vavuniya.png',
-    description: 'Comprehensive ICT program for the Northern Province—software, networks, and info systems.',
-    enrollLink: '/enroll/ict-vavuniya',
-    pathways: [
-      { name: 'Software Development', icon: 'Code', description: 'Web, mobile, backend.' },
-      { name: 'Network & Security', icon: 'Shield', description: 'Cybersecurity, network admin.' }
-    ]
-  },
-  {
-    id: '17',
-    title: 'BSc Honours in Biosystems Technology',
-    university: 'University of Vavuniya',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/vavuniya.png',
-    description: 'Tech for biosciences, food systems, and green innovation.',
-    enrollLink: '/enroll/biosys-vavuniya',
-    pathways: [
-      { name: 'Biosystems', icon: 'Leaf', description: 'Agriculture and food tech.' },
-      { name: 'Bioprocess', icon: 'Beaker', description: 'Bio-manufacturing.' }
+      { name: 'International Trade Law', icon: 'Ship', description: 'Trade, commerce, WTO regulations.' },
+      { name: 'Intellectual Property', icon: 'Copyright', description: 'Patents, trademarks, copyright.' },
+      { name: 'Comparative Law', icon: 'BookOpen', description: 'Global legal systems and theory.' },
+      { name: 'Research & Academia', icon: 'GraduationCap', description: 'Legal research and teaching.' }
     ]
   }
 ],
@@ -908,7 +889,13 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/pera-logo.png',
     description: 'Degree in English literature and language with specializations in creative writing, linguistics, and teaching.',
-    enrollLink: '/enroll/ba-english-pera'
+    enrollLink: '/enroll/ba-english-pera',
+    pathways: [
+      { name: 'Creative Writing', icon: 'PenTool', description: 'Fiction, poetry, and creative nonfiction.' },
+      { name: 'Linguistics', icon: 'Languages', description: 'Study of language structure and theory.' },
+      { name: 'Literary Studies', icon: 'BookOpen', description: 'Critical theory, analysis, classics.' },
+      { name: 'English Education', icon: 'GraduationCap', description: 'Teaching English in schools and colleges.' }
+    ]
   },
   {
     id: '2',
@@ -918,7 +905,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uoc-logo.png',
     description: 'Sinhala language and literature, including criticism, creative writing, and linguistics.',
-    enrollLink: '/enroll/ba-sinhala-colombo'
+    enrollLink: '/enroll/ba-sinhala-colombo',
+    pathways: [
+      { name: 'Linguistics', icon: 'Languages', description: 'Language science and linguistics.' },
+      { name: 'Sinhala Literature', icon: 'BookOpen', description: 'Analysis of Sinhala classics and poetry.' },
+      { name: 'Creative Writing', icon: 'PenTool', description: 'Sinhala prose and poetry.' }
+    ]
   },
   {
     id: '3',
@@ -928,7 +920,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uok-logo.png',
     description: 'Explore Sri Lankan, Asian, and world history with research and teaching pathways.',
-    enrollLink: '/enroll/ba-history-kelaniya'
+    enrollLink: '/enroll/ba-history-kelaniya',
+    pathways: [
+      { name: 'Sri Lankan History', icon: 'Map', description: 'Local and ancient history.' },
+      { name: 'World History', icon: 'Globe', description: 'Global civilizations, comparative history.' },
+      { name: 'Heritage Management', icon: 'Layers', description: 'Museology, archaeology, conservation.' }
+    ]
   },
   {
     id: '4',
@@ -938,7 +935,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/pera-logo.png',
     description: 'Critical thinking, logic, and Eastern/Western philosophy traditions.',
-    enrollLink: '/enroll/ba-philosophy-pera'
+    enrollLink: '/enroll/ba-philosophy-pera',
+    pathways: [
+      { name: 'Logic', icon: 'Activity', description: 'Formal logic and argumentation.' },
+      { name: 'Buddhist Philosophy', icon: 'Leaf', description: 'Eastern philosophical traditions.' },
+      { name: 'Ethics', icon: 'Heart', description: 'Applied, social, and professional ethics.' }
+    ]
   },
   {
     id: '5',
@@ -948,7 +950,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uok-logo.png',
     description: 'Covers journalism, media production, and communications theory for the digital era.',
-    enrollLink: '/enroll/ba-masscomm-kelaniya'
+    enrollLink: '/enroll/ba-masscomm-kelaniya',
+    pathways: [
+      { name: 'Journalism', icon: 'PenTool', description: 'News writing, reporting, editing.' },
+      { name: 'Media Production', icon: 'Monitor', description: 'Radio, TV, digital content.' },
+      { name: 'Communication Studies', icon: 'MessageCircle', description: 'Media theory, PR, and advertising.' }
+    ]
   },
   {
     id: '6',
@@ -958,7 +965,13 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/vpa-logo.png',
     description: 'Covers painting, sculpture, multimedia, and design, with strong studio practice.',
-    enrollLink: '/enroll/bfa-vpa'
+    enrollLink: '/enroll/bfa-vpa',
+    pathways: [
+      { name: 'Painting', icon: 'Palette', description: 'Contemporary and classical painting.' },
+      { name: 'Sculpture', icon: 'Hammer', description: 'Traditional and modern sculpting.' },
+      { name: 'Digital Arts', icon: 'Monitor', description: 'Graphics, animation, multimedia.' },
+      { name: 'Art History', icon: 'BookOpen', description: 'Art criticism and historical analysis.' }
+    ]
   },
   {
     id: '7',
@@ -968,7 +981,13 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/vpa-logo.png',
     description: 'Degree in classical, contemporary, and Sri Lankan music performance, composition, and teaching.',
-    enrollLink: '/enroll/bmus-vpa'
+    enrollLink: '/enroll/bmus-vpa',
+    pathways: [
+      { name: 'Performance', icon: 'Music', description: 'Instrumental and vocal performance.' },
+      { name: 'Composition', icon: 'FileMusic', description: 'Music writing and arrangement.' },
+      { name: 'Music Education', icon: 'GraduationCap', description: 'Teaching and music pedagogy.' },
+      { name: 'Music Technology', icon: 'Headphones', description: 'Production and digital audio.' }
+    ]
   },
   {
     id: '8',
@@ -978,7 +997,12 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/sjp-logo.png',
     description: 'Buddhist doctrine, history, and philosophy, with a focus on ancient texts and comparative religion.',
-    enrollLink: '/enroll/ba-buddhist-sjp'
+    enrollLink: '/enroll/ba-buddhist-sjp',
+    pathways: [
+      { name: 'Philosophy', icon: 'Leaf', description: 'Buddhist and comparative philosophy.' },
+      { name: 'History', icon: 'BookOpen', description: 'Development of Buddhism and South Asian history.' },
+      { name: 'Pali Language', icon: 'Languages', description: 'Ancient Pali literature and scripts.' }
+    ]
   }
 ]
 }
@@ -986,4 +1010,3 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
 export const getCareerPrograms = (careerPath: string): DegreeProgram[] => {
   return careerPrograms[careerPath] || []
 }
-   
