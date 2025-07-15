@@ -76,7 +76,7 @@ const CourseDetailPage = ({ params }: CourseDetailPageProps) => {
             </nav>
 
             <button className="bg-maroon-700 text-white px-6 py-2 rounded-full hover:bg-maroon-800 transition-colors">
-              Get Started
+              Salary Prediction
             </button>
           </div>
         </div>
