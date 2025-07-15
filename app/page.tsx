@@ -1,4 +1,4 @@
-import { ChevronRight, Sparkles, BookOpen, Users, TrendingUp, BrainCircuit, Code, Stethoscope, Scale, Palette, Users2, } from 'lucide-react';
+import { ChevronRight, Sparkles, BookOpen, Users, TrendingUp, BrainCircuit, Code, Stethoscope,  Palette, Users2, } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import CareerPathCard from '@/components/CareerPathCard';
@@ -29,9 +29,9 @@ export default function Home() {
               <Link href="/about" className="text-gray-600 hover:text-maroon-700">About</Link>
             </nav>
 
-            <button className="bg-maroon-700 text-white px-6 py-2 rounded-full hover:bg-maroon-800 transition-colors">
+            <Link href="/salary-prediction" className="bg-maroon-700 text-white px-6 py-2 rounded-full hover:bg-maroon-800 transition-colors">
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
       </header>
@@ -148,15 +148,15 @@ export default function Home() {
             <CareerPathCard
               icon={Code}
               title="Engineering"
-              description="Civil, Mechanical, Electrical, Chemical Engineering"
+              description="Civil, Mechanical, Electrical, Chemical, Electronic, Computer & more"
               tags={["High Demand", "Technical"]}
               programCount="15+ Programs"
               href="/career/engineering"
             />
             <CareerPathCard
               icon={BrainCircuit}
-              title="Information Technology"
-              description="Computer Science, Software Engineering, Data Science"
+              title="Information Technology & Computing"
+              description="Computer Science, Software Engineering, Data Science, IT"
               tags={["Growing Field", "Innovation"]}
               programCount="12+ Programs"
               href="/career/it"
@@ -166,31 +166,31 @@ export default function Home() {
               title="Medicine"
               description="MBBS, Dental Surgery, Veterinary Medicine"
               tags={["Prestigious", "Competitive"]}
-              programCount="8+ Programs"
+              programCount="12+ Programs"
               href="/career/medicine"
             />
             <CareerPathCard
               icon={Users2}
-              title="Business Administration"
-              description="BBA, MBA, Management Studies, Marketing"
+              title="Business & Management"
+              description="BBA, BCom, Management, HR, Marketing, Accounting, Finance"
               tags={["Leadership", "Versatile"]}
               programCount="20+ Programs"
               href="/career/business"
             />
             <CareerPathCard
-              icon={Scale}
-              title="Law"
-              description="LLB, Legal Studies, International Law"
-              tags={["Analytical", "Justice"]}
-              programCount="6+ Programs"
-              href="/career/law"
+              icon={BrainCircuit}
+              title="Technology"
+              description="Engineering Tech, ICT, Biosystems, Industrial IT, Automation"
+              tags={["Innovation", "Future-Ready"]}
+              programCount="15+ Programs"
+              href="/career/technology"
             />
             <CareerPathCard
               icon={Palette}
-              title="Arts & Humanities"
-              description="Literature, History, Philosophy, Fine Arts"
+              title="Arts, Humanities & Law"
+              description="Languages, History, Philosophy, Fine Arts, Law, Social Sciences"
               tags={["Creative", "Cultural"]}
-              programCount="18+ Programs"
+              programCount="30+ Programs"
               href="/career/arts"
             />
           </div>

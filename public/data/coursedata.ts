@@ -626,46 +626,277 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     enrollLink: '/enroll/accountancy-sjp'
   }
 ],
-  'law': [
+  'technology': [
+  // Kelaniya – Engineering Technology added
   {
-    id: '1',
-    title: 'Bachelor of Laws (LLB)',
-    university: 'University of Colombo',
+    id: '6',
+    title: 'Bachelor of Engineering Technology (Honours)',
+    university: 'University of Kelaniya',
     duration: '4 years',
     level: 'Undergraduate',
-    campusLogo: '/images/universities/uoc-logo.png',
-    description: 'Sri Lanka’s flagship LLB program with comprehensive training in all major branches of law. Includes moot courts, research, and legal practice skills.',
-    enrollLink: '/enroll/llb-colombo'
+    campusLogo: '/images/universities/uok-logo.png',
+    description: 'Applied engineering degree for Tech‑stream students—hands‑on, industry focused, with majors in Materials, Robotics & Automation, and Environmental/Energy technologies.',
+    enrollLink: '/enroll/engtech-uok',
+    pathways: [
+      { name: 'Materials & Process Tech', icon: 'Cube', description: 'Material science, processing, industrial tech.' },
+      { name: 'Robotics & Automation', icon: 'Bot', description: 'Automation systems, robotics, industrial control.' },
+      { name: 'Environmental/Energy Tech', icon: 'Sun', description: 'Renewable energy systems, environmental tech.' }
+    ]
+  },
+  // Other Kelaniya stream degrees (ICT and Biosystems)
+  {
+    id: '5',
+    title: 'BSc (Hons) in Information & Communication Technology (ICT)',
+    university: 'University of Kelaniya',
+    duration: '4 years',
+    level: 'Undergraduate',
+    campusLogo: '/images/universities/uok-logo.png',
+    description: 'ICT program with a focus on software, network, systems, and digital business.',
+    enrollLink: '/enroll/ict-uok',
+    pathways: [
+      { name: 'Software Development', icon: 'Code', description: 'Web, app, and cloud software.' },
+      { name: 'Networking', icon: 'Wifi', description: 'System admin, networking.' },
+      { name: 'IT Management', icon: 'Clipboard', description: 'Tech for business.' }
+    ]
   },
   {
-    id: '2',
-    title: 'Bachelor of Laws (LLB)',
-    university: 'University of Peradeniya',
+    id: '6b',
+    title: 'BSc Honours in Biosystems Technology',
+    university: 'University of Kelaniya',
     duration: '4 years',
     level: 'Undergraduate',
-    campusLogo: '/images/universities/pera-logo.png',
-    description: 'Full LLB with practical training, moot court, and legal clinic experience in a campus environment.',
-    enrollLink: '/enroll/llb-pera'
+    campusLogo: '/images/universities/uok-logo.png',
+    description: 'Integrates biology, technology, and engineering for agriculture and biotech careers.',
+    enrollLink: '/enroll/biosys-uok',
+    pathways: [
+      { name: 'Agri Tech', icon: 'Leaf', description: 'Smart farming, food production.' },
+      { name: 'Bioprocessing', icon: 'Beaker', description: 'Food science, fermentation.' },
+      { name: 'Environmental Tech', icon: 'Globe', description: 'Sustainability, clean tech.' }
+    ]
+  },
+  // Moratuwa
+  {
+    id: '1',
+    title: 'Bachelor of Technology (BTech) in Engineering',
+    university: 'University of Moratuwa',
+    duration: '4 years',
+    level: 'Undergraduate',
+    campusLogo: '/images/universities/uom-logo.png',
+    description: 'Technology-focused engineering degree with pathways in civil, mechanical, and electrical technology.',
+    enrollLink: '/enroll/btech-eng-uom',
+    pathways: [
+      { name: 'Civil Technology', icon: 'Building', description: 'Construction, materials, and surveying.' },
+      { name: 'Mechanical Technology', icon: 'Settings', description: 'Machines, manufacturing, CAD.' },
+      { name: 'Electrical Technology', icon: 'Zap', description: 'Electrical systems, automation.' }
+    ]
+  },
+  // Jayewardenepura
+  {
+    id: '2',
+    title: 'BSc Honours in Engineering Technology',
+    university: 'University of Sri Jayewardenepura',
+    duration: '4 years',
+    level: 'Undergraduate',
+    campusLogo: '/images/universities/sjp-logo.png',
+    description: 'Engineering Technology degree focused on applied engineering, design, and practical skills.',
+    enrollLink: '/enroll/engtech-sjp',
+    pathways: [
+      { name: 'Manufacturing Technology', icon: 'Factory', description: 'Modern manufacturing, automation.' },
+      { name: 'Civil & Construction', icon: 'Building', description: 'Structures, infrastructure.' },
+      { name: 'Electrical Technology', icon: 'Zap', description: 'Electrical installations, electronics.' }
+    ]
   },
   {
     id: '3',
-    title: 'Bachelor of Laws (LLB)',
-    university: 'Open University of Sri Lanka',
+    title: 'BSc Honours in Information & Communication Technology (ICT)',
+    university: 'University of Sri Jayewardenepura',
     duration: '4 years',
     level: 'Undergraduate',
-    campusLogo: '/images/universities/open.png',
-    description: 'Accessible LLB for working students, covering all major law subjects and offering flexibility.',
-    enrollLink: '/enroll/llb-ousl'
+    campusLogo: '/images/universities/sjp-logo.png',
+    description: 'Modern ICT degree with software, hardware, networking, and cloud.',
+    enrollLink: '/enroll/ict-sjp',
+    pathways: [
+      { name: 'Software Engineering', icon: 'Code', description: 'Programming, app development.' },
+      { name: 'Networking', icon: 'Wifi', description: 'Networks, cloud, cyber security.' },
+      { name: 'Information Systems', icon: 'Monitor', description: 'IT solutions for businesses.' }
+    ]
   },
   {
     id: '4',
-    title: 'Master of Laws (LLM)',
-    university: 'University of Colombo',
-    duration: '1 year',
-    level: 'Postgraduate',
-    campusLogo: '/images/universities/uoc-logo.png',
-    description: 'Advanced research degree for law graduates—focus on international, comparative, and commercial law.',
-    enrollLink: '/enroll/llm-colombo'
+    title: 'BSc Honours in Biosystems Technology',
+    university: 'University of Sri Jayewardenepura',
+    duration: '4 years',
+    level: 'Undergraduate',
+    campusLogo: '/images/universities/sjp-logo.png',
+    description: 'Tech meets biology: food, agriculture, environment, and applied biosciences.',
+    enrollLink: '/enroll/biosys-sjp',
+    pathways: [
+      { name: 'Agri Tech', icon: 'Leaf', description: 'Agricultural innovation, food technology.' },
+      { name: 'Bioprocessing', icon: 'Beaker', description: 'Biotech, food processing, fermentation.' },
+      { name: 'Environmental Tech', icon: 'Globe', description: 'Sustainable tech, waste management.' }
+    ]
+  },
+  // Ruhuna
+  {
+    id: '7',
+    title: 'BSc Honours in Information & Communication Technology (ICT)',
+    university: 'University of Ruhuna',
+    duration: '4 years',
+    level: 'Undergraduate',
+    campusLogo: '/images/universities/ruhuna-logo.jpeg',
+    description: 'ICT program with a focus on coding, networking, and applied computing.',
+    enrollLink: '/enroll/ict-ruhuna',
+    pathways: [
+      { name: 'Software Engineering', icon: 'Code', description: 'Programming, SE.' },
+      { name: 'Network & Security', icon: 'Shield', description: 'Networking, cyber security.' },
+      { name: 'Business IT', icon: 'Monitor', description: 'Tech for industry.' }
+    ]
+  },
+  {
+    id: '8',
+    title: 'BSc Honours in Biosystems Technology',
+    university: 'University of Ruhuna',
+    duration: '4 years',
+    level: 'Undergraduate',
+    campusLogo: '/images/universities/ruhuna-logo.jpeg',
+    description: 'Combines agriculture, biotechnology, and technology for next-gen bioscience careers.',
+    enrollLink: '/enroll/biosys-ruhuna',
+    pathways: [
+      { name: 'Bio Agri Tech', icon: 'Leaf', description: 'Biology-driven farming.' },
+      { name: 'Bio Processing', icon: 'Beaker', description: 'Bioprocess, food tech.' },
+      { name: 'Environmental Solutions', icon: 'Globe', description: 'Green tech, bio remediation.' }
+    ]
+  },
+  // Eastern (Trincomalee)
+  {
+    id: '9',
+    title: 'BTech (Hons) in Engineering',
+    university: 'Eastern University (Trincomalee Campus)',
+    duration: '4 years',
+    level: 'Undergraduate',
+    campusLogo: '/images/universities/eastern.png',
+    description: 'Practice-driven engineering technology: civil, mechanical, electrical.',
+    enrollLink: '/enroll/btech-eng-eastern',
+    pathways: [
+      { name: 'Civil Technology', icon: 'Building', description: 'Building and construction.' },
+      { name: 'Mechanical Technology', icon: 'Settings', description: 'Automation and manufacturing.' },
+      { name: 'Electrical Technology', icon: 'Zap', description: 'Electrical systems and control.' }
+    ]
+  },
+  {
+    id: '10',
+    title: 'BSc Honours in Information & Communication Technology (ICT)',
+    university: 'Eastern University (Trincomalee Campus)',
+    duration: '4 years',
+    level: 'Undergraduate',
+    campusLogo: '/images/universities/eastern.png',
+    description: 'ICT degree in Eastern Province: software, networks, and digital systems.',
+    enrollLink: '/enroll/ict-eastern',
+    pathways: [
+      { name: 'Software Engineering', icon: 'Code', description: 'Modern programming, app dev.' },
+      { name: 'Networking', icon: 'Wifi', description: 'Network admin, cyber security.' }
+    ]
+  },
+  {
+    id: '11',
+    title: 'BSc Honours in Biosystems Technology',
+    university: 'Eastern University (Trincomalee Campus)',
+    duration: '4 years',
+    level: 'Undergraduate',
+    campusLogo: '/images/universities/eastern.png',
+    description: 'Agro-tech, biotech, and bioresource-focused technology degree.',
+    enrollLink: '/enroll/biosys-eastern',
+    pathways: [
+      { name: 'Agri Tech', icon: 'Leaf', description: 'Agro innovation, precision farming.' },
+      { name: 'Bioprocess', icon: 'Beaker', description: 'Bio-based manufacturing.' }
+    ]
+  },
+  // Sabaragamuwa
+  {
+    id: '12',
+    title: 'BSc Honours in Information & Communication Technology (ICT)',
+    university: 'Sabaragamuwa University of Sri Lanka',
+    duration: '4 years',
+    level: 'Undergraduate',
+    campusLogo: '/images/universities/sabaragamuwa.png',
+    description: 'Prepares students for the digital future with ICT, coding, and applied systems.',
+    enrollLink: '/enroll/ict-sab',
+    pathways: [
+      { name: 'Software Engineering', icon: 'Code', description: 'Full-stack dev, SE.' },
+      { name: 'Networking', icon: 'Wifi', description: 'Admin, infrastructure, security.' }
+    ]
+  },
+  {
+    id: '13',
+    title: 'BSc Honours in Biosystems Technology',
+    university: 'Sabaragamuwa University of Sri Lanka',
+    duration: '4 years',
+    level: 'Undergraduate',
+    campusLogo: '/images/universities/sabaragamuwa.png',
+    description: 'Technology for biosciences, sustainable agriculture, and bioprocessing.',
+    enrollLink: '/enroll/biosys-sab',
+    pathways: [
+      { name: 'Bio Agri Tech', icon: 'Leaf', description: 'Sustainable agri innovation.' },
+      { name: 'Bio Processing', icon: 'Beaker', description: 'Food and biotech process.' }
+    ]
+  },
+  // Uva Wellassa
+  {
+    id: '14',
+    title: 'Bachelor of Industrial Information Technology',
+    university: 'Uva Wellassa University',
+    duration: '4 years',
+    level: 'Undergraduate',
+    campusLogo: '/images/universities/uva.jpg',
+    description: 'Applied IT for industry: automation, data, industrial informatics.',
+    enrollLink: '/enroll/ind-it-uwu',
+    pathways: [
+      { name: 'Automation', icon: 'Bot', description: 'Robotics, smart systems.' },
+      { name: 'Data Systems', icon: 'Database', description: 'Analytics, IT management.' }
+    ]
+  },
+  {
+    id: '15',
+    title: 'Bachelor of Science in Technology',
+    university: 'Uva Wellassa University',
+    duration: '4 years',
+    level: 'Undergraduate',
+    campusLogo: '/images/universities/uva.jpg',
+    description: 'Multidisciplinary degree covering applied science, IT, and biosystems.',
+    enrollLink: '/enroll/tech-uwu',
+    pathways: [
+      { name: 'Applied IT', icon: 'Cpu', description: 'Programming, systems.' },
+      { name: 'Agro Tech', icon: 'Leaf', description: 'Modern farming, food science.' }
+    ]
+  },
+  // Vavuniya
+  {
+    id: '16',
+    title: 'BSc Honours in Information & Communication Technology (ICT)',
+    university: 'University of Vavuniya',
+    duration: '4 years',
+    level: 'Undergraduate',
+    campusLogo: '/images/universities/vavuniya.png',
+    description: 'Comprehensive ICT program for the Northern Province—software, networks, and info systems.',
+    enrollLink: '/enroll/ict-vavuniya',
+    pathways: [
+      { name: 'Software Development', icon: 'Code', description: 'Web, mobile, backend.' },
+      { name: 'Network & Security', icon: 'Shield', description: 'Cybersecurity, network admin.' }
+    ]
+  },
+  {
+    id: '17',
+    title: 'BSc Honours in Biosystems Technology',
+    university: 'University of Vavuniya',
+    duration: '4 years',
+    level: 'Undergraduate',
+    campusLogo: '/images/universities/vavuniya.png',
+    description: 'Tech for biosciences, food systems, and green innovation.',
+    enrollLink: '/enroll/biosys-vavuniya',
+    pathways: [
+      { name: 'Biosystems', icon: 'Leaf', description: 'Agriculture and food tech.' },
+      { name: 'Bioprocess', icon: 'Beaker', description: 'Bio-manufacturing.' }
+    ]
   }
 ],
   'arts': [
