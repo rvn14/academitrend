@@ -4,7 +4,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BrainCircuit, ChevronRight, Clock, GraduationCap, MapPin, Star, TrendingUp, Users, Award, BookOpen, Calendar, DollarSign, BarChart3, PieChart, LineChart } from 'lucide-react'
+import { BrainCircuit, ChevronRight, Clock, GraduationCap, MapPin, Star, TrendingUp, Users, Award, BookOpen, Calendar, DollarSign, BarChart3, PieChart, LineChart, Building2, Leaf, Car, Mountain, Factory, Flame, Settings, Bot, Zap, Cpu, Gauge, Radio, Code, Shield, Globe, Eye, Microchip, Layers, Stethoscope, Scissors, Baby, Ambulance, Smile, Heart, Cat, Bird, Megaphone, Target, Lightbulb, Smartphone, Calculator, CreditCard, Scale, Briefcase, Flag, Home, Ship, Copyright, PenTool, Languages, Tv, Palette, Hammer, Monitor, Music, FileMusic, Headphones } from 'lucide-react'
 import { DegreeProgram, getCareerPrograms } from '../../../../public/data/coursedata'
 
 interface CourseDetailPageProps {
@@ -18,6 +18,8 @@ const CourseDetailPage = ({ params }: CourseDetailPageProps) => {
   const { path, courseId } = React.use(params)
   const degreePrograms = getCareerPrograms(path)
   const course = degreePrograms.find(program => program.id === courseId)
+  
+  const [logoError, setLogoError] = React.useState(false)
 
   if (!course) {
     return <div>Course not found</div>
@@ -87,14 +89,23 @@ const CourseDetailPage = ({ params }: CourseDetailPageProps) => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
             <div className="lg:col-span-2 flex flex-col justify-center">
               <div className="flex items-center gap-6 mb-8">
-                <div className="w-28 aspect-square bg-white/80 backdrop-blur-lg border border-maroon-100 rounded-full flex items-center justify-center shadow-xl overflow-hidden">
-              <Image
-                src={course.campusLogo}
-                alt="logo"
-                width={100}
-                height={100}
-                className="object-contain object-center"
-              />
+                <div className="w-28 aspect-square  backdrop-blur-lg border border-maroon-100 rounded-full flex items-center justify-center shadow-xl overflow-clip relative">
+                  {!logoError ? (
+                    <Image
+                      src={course.campusLogo}
+                      alt={`${course.university} logo`}
+                      width={100}
+                      height={100}
+                      className="object-contain object-center"
+                      priority
+                      onError={() => {
+                        console.error('Logo failed to load:', course.campusLogo);
+                        setLogoError(true);
+                      }}
+                    />
+                  ) : (
+                    <GraduationCap className="w-12 h-12 text-maroon-600" />
+                  )}
                 </div>
                 <div>
                   <div className="flex items-center gap-3 mb-3">
@@ -151,6 +162,76 @@ const CourseDetailPage = ({ params }: CourseDetailPageProps) => {
           </div>
         </div>
       </section>
+
+      
+      {course.pathways && course.pathways.length > 0 && (
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Specialization Pathways</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Choose your area of focus and specialize in cutting-edge fields that match your career aspirations.
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-6">
+              {course.pathways.map((pathway, index) => {
+                // Dynamic icon component rendering
+                const getIconComponent = (iconName: string) => {
+                  const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+                    BrainCircuit, BarChart3, Shield, LineChart, BookOpen, Code, Globe, Eye, Microchip, Layers,
+                    Building2, Leaf, Car, Mountain, Factory, Flame, Settings, Bot, Zap, Cpu, Gauge, Radio,
+                    Stethoscope, Scissors, Baby, Ambulance, Smile, Heart, Cat, Bird, DollarSign, Megaphone,
+                    Users, Target, Lightbulb, Smartphone, Calculator, CreditCard, Scale, Briefcase, Flag,
+                    Home, Ship, Copyright, GraduationCap, PenTool, Languages, Tv, Palette, Hammer, Monitor,
+                    Music, FileMusic, Headphones
+                  }
+                  const IconComponent = iconMap[iconName] || BookOpen
+                  return <IconComponent className="w-8 h-8 text-maroon-700" />
+                }
+
+                return (
+                  <div 
+                    key={index}
+                    className="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-maroon-200 cursor-pointer transform hover:-translate-y-1 flex flex-col w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)] xl:w-[calc(20%-19.2px)] min-h-[280px] max-w-[240px]"
+                  >
+                    <div className="text-center flex flex-col h-full">
+                      {/* Icon Container */}
+                      <div className="w-16 h-16 bg-gradient-to-br from-maroon-100 to-maroon-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-maroon-200 group-hover:to-maroon-300 transition-all duration-300 flex-shrink-0">
+                        {getIconComponent(pathway.icon)}
+                      </div>
+                      
+                      {/* Title */}
+                      <div className="mb-4 flex-shrink-0">
+                        <h3 className="text-lg font-bold text-gray-900 group-hover:text-maroon-700 transition-colors leading-tight min-h-[3.5rem] flex items-center justify-center text-center px-2">
+                          {pathway.name}
+                        </h3>
+                      </div>
+                      
+                      {/* Description */}
+                      <div className="flex-grow flex items-start justify-center">
+                        <p className="text-sm text-gray-600 leading-relaxed text-center">
+                          {pathway.description}
+                        </p>
+                      </div>
+                    </div>
+                    
+                    {/* Hover effect overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-maroon-600/5 to-maroon-700/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                  </div>
+                )
+              })}
+            </div>
+            
+            <div className="mt-10 text-center">
+            
+              <button className="bg-gradient-to-r from-maroon-700 to-maroon-600 text-white px-8 py-3 rounded-full font-semibold hover:from-maroon-800 hover:to-maroon-700 transition-colors duration-200 shadow-lg">
+                Learn More About Pathways
+              </button>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Analytics Section */}
       <section className="py-12">

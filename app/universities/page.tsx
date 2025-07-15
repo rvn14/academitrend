@@ -11,6 +11,7 @@ const universities = [
 		students: '10,000+',
 		programs: '50+',
 		logoSrc: '/images/universities/uoc-logo.png',
+		shortUrl: 'colombo'
 	},
 	{
 		name: 'University of Peradeniya',
@@ -18,6 +19,7 @@ const universities = [
 		students: '12,000+',
 		programs: '60+',
 		logoSrc: '/images/universities/pera-logo.png',
+		shortUrl: 'peradeniya'
 	},
 	{
 		name: 'University of Moratuwa',
@@ -25,6 +27,7 @@ const universities = [
 		students: '8,000+',
 		programs: '40+',
 		logoSrc: '/images/universities/uom-logo.png',
+		shortUrl: 'moratuwa'
 	},
 	{
 		name: 'University of Sri Jayewardenepura',
@@ -32,6 +35,7 @@ const universities = [
 		students: '14,000+',
 		programs: '55+',
 		logoSrc: '/images/universities/sjp-logo.png',
+		shortUrl: 'sri-jayewardenepura'
 	},
 	{
 		name: 'University of Kelaniya',
@@ -39,6 +43,7 @@ const universities = [
 		students: '11,000+',
 		programs: '45+',
 		logoSrc: '/images/universities/uok-logo.png',
+		shortUrl: 'kelaniya'
 	},
 	{
 		name: 'Rajarata University of Sri Lanka',
@@ -46,6 +51,7 @@ const universities = [
 		students: '7,000+',
 		programs: '30+',
 		logoSrc: '/images/universities/rajarata.png',
+		shortUrl: 'rajarata'
 	},
 	{
 		name: 'Eastern University of Sri Lanka',
@@ -53,6 +59,7 @@ const universities = [
 		students: '6,000+',
 		programs: '25+',
 		logoSrc: '/images/universities/eastern.png',
+		shortUrl: 'eastern'
 	},
 	{
 		name: 'Wayamba University of Sri Lanka',
@@ -60,6 +67,7 @@ const universities = [
 		students: '5,000+',
 		programs: '20+',
 		logoSrc: '/images/universities/wayamba.png',
+		shortUrl: 'wayamba'
 	},
 	{
 		name: 'Sabaragamuwa University of Sri Lanka',
@@ -67,6 +75,7 @@ const universities = [
 		students: '4,500+',
 		programs: '18+',
 		logoSrc: '/images/universities/sabaragamuwa.png',
+		shortUrl: 'sabaragamuwa'
 	},
 	{
 		name: 'South Eastern University of Sri Lanka',
@@ -74,6 +83,7 @@ const universities = [
 		students: '3,500+',
 		programs: '15+',
 		logoSrc: '/images/universities/southeastern.png',
+		shortUrl: 'southeastern'
 	},
 	{
 		name: 'Uva Wellassa University',
@@ -81,6 +91,7 @@ const universities = [
 		students: '3,000+',
 		programs: '12+',
 		logoSrc: '/images/universities/uva.jpg',
+		shortUrl: 'uva-wellassa'
 	},
 	{
 		name: 'Open University of Sri Lanka',
@@ -88,6 +99,7 @@ const universities = [
 		students: '20,000+',
 		programs: '70+',
 		logoSrc: '/images/universities/open.png',
+		shortUrl: 'open'
 	},
 	// ...add more as needed
 ]
@@ -160,7 +172,7 @@ const UniversitiesPage = () => {
 				</div>
 			</section>
 
-			{/* Universities Grid */}
+			
 			<section className="py-16 bg-maroon-50/60">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-12">
@@ -202,7 +214,7 @@ const UniversitiesPage = () => {
 									</span>
 								</div>
 								<Link
-									href={`/universities/${idx}`}
+									href={`/universities/${uni.shortUrl}`}
 									className="mt-auto bg-maroon-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-maroon-800 transition-colors"
 								>
 									View Details

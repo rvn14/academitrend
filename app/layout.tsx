@@ -27,11 +27,13 @@ export default function RootLayout({
       <body
         className={`antialiased bg-maroon-900`}
       >
-        
-        
-          {children}
+        <div className="min-h-screen flex flex-col">
+          <main className="flex-grow">
+            {children}
+          </main>
           <Chatbot />
           <Footer />
+        </div>
         
         <Toaster />
       </body>

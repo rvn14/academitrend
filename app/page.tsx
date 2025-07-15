@@ -63,9 +63,9 @@ export default function Home() {
                 <button className="bg-maroon-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-maroon-800 transition-colors cursor-pointer">
                   Start Exploring
                 </button>
-                <button className="border border-maroon-700 ring-1 ring-maroon-700 text-maroon-700 px-8 py-4 rounded-full font-semibold hover:bg-maroon-700/10 transition-all cursor-pointer">
+                <Link href="/universities" className="border border-maroon-700 ring-1 ring-maroon-700 text-maroon-700 px-8 py-4 rounded-full font-semibold hover:bg-maroon-700/10 transition-all cursor-pointer text-center">
                   View Universities
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -198,7 +198,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <button className="bg-maroon-700 text-white px-8 py-3 rounded-full font-semibold hover:bg-maroon-800 transition-colors cursor-pointer">
-              View All Career Paths
+              More will added soon
             </button>
           </div>
         </div>
