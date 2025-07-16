@@ -29,7 +29,7 @@ export default function Home() {
               <Link href="/about" className="text-gray-600 hover:text-maroon-700">About</Link>
             </nav>
 
-            <Link href="/salary-prediction" className="bg-maroon-700 text-white px-6 py-2 rounded-full hover:bg-maroon-800 transition-colors">
+            <Link href="/salary-prediction" className="bg-maroon-700 text-white px-6 py-2 rounded-full hover:bg-maroon-800 transition-colors cursor-pointer">
               Salary Prediction
             </Link>
           </div>
