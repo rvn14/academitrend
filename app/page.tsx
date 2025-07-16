@@ -14,23 +14,24 @@ export default function Home() {
       <header className="relative z-50 bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 flex-shrink-0">
               <div className="w-8 h-8 bg-maroon-700 rounded-lg flex items-center justify-center">
                 <BrainCircuit className="h-5 w-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">ACADEMITREND</span>
+              <span className="text-xl font-bold text-gray-900 whitespace-nowrap">ACADEMITREND</span>
             </div>
             
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-maroon-700 hover:text-maroon-700 font-medium">Home</Link>
-              <Link href="/universities" className="text-gray-600 hover:text-maroon-700">Universities</Link>
-              <Link href="/programs" className="text-gray-600 hover:text-maroon-700">Programs</Link>
-              <Link href="/trends" className="text-gray-600 hover:text-maroon-700">Trends</Link>
-              <Link href="/about" className="text-gray-600 hover:text-maroon-700">About</Link>
+            <nav className="hidden md:flex items-center space-x-8 flex-shrink-0">
+              <Link href="/" className="text-maroon-700 hover:text-maroon-700 font-medium whitespace-nowrap">Home</Link>
+              <Link href="/universities" className="text-gray-600 hover:text-maroon-700 whitespace-nowrap">Universities</Link>
+              <Link href="/programs" className="text-gray-600 hover:text-maroon-700 whitespace-nowrap">Programs</Link>
+              <Link href="/trends" className="text-gray-600 hover:text-maroon-700 whitespace-nowrap">Trends</Link>
+              <Link href="/about" className="text-gray-600 hover:text-maroon-700 whitespace-nowrap">About</Link>
             </nav>
 
-            <Link href="/salary-prediction" className="bg-maroon-700 text-white px-6 py-2 rounded-full hover:bg-maroon-800 transition-colors cursor-pointer">
-              Salary Prediction
+            <Link href="/salary-prediction" className="bg-maroon-700 text-white px-4 sm:px-6 py-2 rounded-full hover:bg-maroon-800 transition-colors cursor-pointer text-sm sm:text-base whitespace-nowrap flex-shrink-0">
+              <span className="hidden sm:inline">Salary Prediction</span>
+              <span className="sm:hidden">Salary</span>
             </Link>
           </div>
         </div>
