@@ -19,148 +19,98 @@ export interface DegreeProgram {
 
 export const careerPrograms: Record<string, DegreeProgram[]> = {
   'engineering': [
-  // University of Moratuwa
+  // University of Moratuwa — Core BSc Eng (Hons) Specializations
   {
     id: '1',
-    title: 'BSc Engineering (Hons) – Civil Engineering',
+    title: 'BSc Engineering (Hons)',
     university: 'University of Moratuwa',
     duration: '4 years',
     level: 'Undergraduate',
     campusLogo: '/images/universities/uom-logo.png',
-    description: 'Design, construction, and management of physical and naturally built environments.',
-    enrollLink: '/enroll/civil-eng-uom',
-    
+    description: 'Premier engineering degree with specializations in Civil, Mechanical, Electrical, Electronic & Telecommunication, Computer Science & Engineering, and Chemical & Process. Strong industry links and research.',
+    enrollLink: '/enroll/eng-uom'
   },
+  // University of Moratuwa — Standalone Engineering Degrees
   {
     id: '2',
-    title: 'BSc Engineering (Hons) – Mechanical Engineering',
+    title: 'BSc Engineering (Hons) in Materials Science & Engineering',
     university: 'University of Moratuwa',
     duration: '4 years',
     level: 'Undergraduate',
     campusLogo: '/images/universities/uom-logo.png',
-    description: 'Mechanics, energy systems, manufacturing, and robotics.',
-    enrollLink: '/enroll/mech-eng-uom'
+    description: 'Specialized program in materials science, nanotechnology, polymers, ceramics, and metallurgy.',
+    enrollLink: '/enroll/materials-uom'
   },
   {
     id: '3',
-    title: 'BSc Engineering (Hons) – Electrical Engineering',
+    title: 'BSc Engineering (Hons) in Earth Resources Engineering',
     university: 'University of Moratuwa',
     duration: '4 years',
     level: 'Undergraduate',
     campusLogo: '/images/universities/uom-logo.png',
-    description: 'Power systems, electrical machines, electronics, and automation.',
-    enrollLink: '/enroll/electrical-eng-uom'
+    description: 'Dedicated to mining, minerals, geology, and management of earth resources.',
+    enrollLink: '/enroll/earth-uom'
   },
   {
     id: '4',
-    title: 'BSc Engineering (Hons) – Electronic & Telecommunication Engineering',
+    title: 'BSc Engineering (Hons) in Textile & Apparel Engineering',
     university: 'University of Moratuwa',
     duration: '4 years',
     level: 'Undergraduate',
     campusLogo: '/images/universities/uom-logo.png',
-    description: 'Signals, communication networks, embedded systems, and digital electronics.',
-    enrollLink: '/enroll/entc-eng-uom'
+    description: 'Specialized degree in textile materials, apparel manufacturing, and fashion technology.',
+    enrollLink: '/enroll/textile-uom'
   },
   {
     id: '5',
-    title: 'BSc Engineering (Hons) – Computer Science & Engineering',
+    title: 'BSc Engineering (Hons) in Transport & Logistics Engineering',
     university: 'University of Moratuwa',
     duration: '4 years',
     level: 'Undergraduate',
     campusLogo: '/images/universities/uom-logo.png',
-    description: 'Software, hardware, networking, algorithms, and intelligent systems.',
-    enrollLink: '/enroll/cse-uom'
-  },
-  {
-    id: '6',
-    title: 'BSc Engineering (Hons) – Chemical & Process Engineering',
-    university: 'University of Moratuwa',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/uom-logo.png',
-    description: 'Chemical industries, process design, polymers, and environmental tech.',
-    enrollLink: '/enroll/chem-eng-uom'
-  },
-  {
-    id: '7',
-    title: 'BSc Engineering (Hons) – Materials Science & Engineering',
-    university: 'University of Moratuwa',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/uom-logo.png',
-    description: 'Materials, nanotechnology, polymers, ceramics, and metallurgy.',
-    enrollLink: '/enroll/materials-eng-uom'
-  },
-  {
-    id: '8',
-    title: 'BSc Engineering (Hons) – Earth Resources Engineering',
-    university: 'University of Moratuwa',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/uom-logo.png',
-    description: 'Mining, minerals, geology, and environmental resources.',
-    enrollLink: '/enroll/earth-eng-uom'
-  },
-  {
-    id: '9',
-    title: 'BSc Engineering (Hons) – Textile & Apparel Engineering',
-    university: 'University of Moratuwa',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/uom-logo.png',
-    description: 'Textile materials, apparel manufacturing, fashion technology.',
-    enrollLink: '/enroll/textile-eng-uom'
-  },
-  {
-    id: '10',
-    title: 'BSc Engineering (Hons) – Transport & Logistics Engineering',
-    university: 'University of Moratuwa',
-    duration: '4 years',
-    level: 'Undergraduate',
-    campusLogo: '/images/universities/uom-logo.png',
-    description: 'Transport systems, supply chain, and logistics management.',
-    enrollLink: '/enroll/transport-eng-uom'
+    description: 'Focuses on transport systems, supply chain, and logistics management.',
+    enrollLink: '/enroll/transport-uom'
   },
 
   // University of Peradeniya
   {
-    id: '11',
+    id: '6',
     title: 'BSc Engineering (Hons)',
     university: 'University of Peradeniya',
     duration: '4 years',
     level: 'Undergraduate',
     campusLogo: '/images/universities/pera-logo.png',
-    description: 'Study at Sri Lanka’s oldest engineering faculty. Select a stream after the first year.',
+    description: 'Sri Lanka\'s oldest engineering faculty. Select specialization after the first year.',
     enrollLink: '/enroll/eng-pera'
   },
 
   // University of Ruhuna
   {
-    id: '12',
+    id: '7',
     title: 'BSc Engineering (Hons)',
     university: 'University of Ruhuna',
     duration: '4 years',
     level: 'Undergraduate',
     campusLogo: '/images/universities/ruhuna-logo.jpeg',
-    description: 'Modern curriculum and project-based learning in major engineering branches.',
+    description: 'Modern curriculum with project-based learning in major engineering branches.',
     enrollLink: '/enroll/eng-ruhuna'
   },
 
   // University of Jaffna
   {
-    id: '13',
+    id: '8',
     title: 'BSc Engineering (Hons)',
     university: 'University of Jaffna',
     duration: '4 years',
     level: 'Undergraduate',
     campusLogo: '/images/universities/jaffna-logo.png',
-    description: 'Civil, mechanical, electrical & electronic, computer, and chemical engineering options.',
+    description: 'Comprehensive engineering education with focus on practical applications.',
     enrollLink: '/enroll/eng-jaffna'
   },
 
-  // Sabaragamuwa University of Sri Lanka
+  // Sabaragamuwa University
   {
-    id: '14',
+    id: '9',
     title: 'BSc Engineering (Hons)',
     university: 'Sabaragamuwa University of Sri Lanka',
     duration: '4 years',
@@ -172,28 +122,29 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
 
   // Eastern University (Trincomalee Campus)
   {
-    id: '15',
-    title: 'BTech (Hons) in Engineering',
+    id: '10',
+    title: 'BSc Engineering (Hons)',
     university: 'Eastern University (Trincomalee Campus)',
     duration: '4 years',
     level: 'Undergraduate',
     campusLogo: '/images/universities/eastern.png',
-    description: 'Technology-focused degree in engineering disciplines for the Eastern Province.',
-    enrollLink: '/enroll/btech-eng-eastern'
+    description: 'Engineering education focused on practical applications for the Eastern Province.',
+    enrollLink: '/enroll/eng-eastern'
   },
 
   // University of Vavuniya
   {
-    id: '16',
-    title: 'BSc (Hons) in Industrial and Process Engineering',
+    id: '11',
+    title: 'BSc Engineering (Hons)',
     university: 'University of Vavuniya',
     duration: '4 years',
     level: 'Undergraduate',
     campusLogo: '/images/universities/vavuniya.png',
-    description: 'Industrial, process, and production engineering for industry-focused careers.',
-    enrollLink: '/enroll/industrial-eng-vavuniya'
+    description: 'Industry-focused engineering education with emphasis on practical skills.',
+    enrollLink: '/enroll/eng-vavuniya'
   }
 ]
+
 ,
   'it': [
     {
@@ -205,31 +156,26 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       level: 'Undergraduate',
       campusLogo: '/images/universities/ucsc-logo.jpg',
       description: 'Sri Lanka’s flagship Computer Science degree. Focuses on core CS theory, software engineering, algorithms, systems, and AI. Strong research and industry links.',
-      enrollLink: '/enroll/cs-ucsc',
-      pathways: [
-        { name: 'Software Engineering', icon: 'Code', description: 'Software design, dev, and modern engineering practices.' },
-        { name: 'Artificial Intelligence', icon: 'BrainCircuit', description: 'Machine learning, deep learning, robotics.' },
-        { name: 'Cybersecurity', icon: 'Shield', description: 'Network, systems, and app security.' },
-        { name: 'Data Science', icon: 'BarChart3', description: 'Big data, ML, and analytics for insights.' }
-      ]
+      enrollLink: '/enroll/cs-ucsc'
     },
     {
-      id: '2',
-      title: 'BSc (Hons) in Computer Science',
-      university: 'University of Kelaniya',
-      streams: ['Maths'],
-      duration: '4 years',
-      level: 'Undergraduate',
-      campusLogo: '/images/universities/uok-logo.png',
-      description: 'Industry-focused Computer Science degree with strong project and research opportunities. Covers algorithms, SE, AI, and more.',
-      enrollLink: '/enroll/cs-uok',
-      pathways: [
-        { name: 'Software Engineering', icon: 'Settings', description: 'Build robust and scalable software systems.' },
-        { name: 'AI & Data Science', icon: 'BrainCircuit', description: 'Data analysis, ML, and intelligence systems.' },
-        { name: 'Cyber Security', icon: 'Shield', description: 'Security best practices, ethical hacking.' },
-        { name: 'Scientific Computing', icon: 'LineChart', description: 'High-performance and computational science.' }
-      ]
-    },
+  id: '2',
+  title: 'BSc (Hons) in Computer Science',
+  university: 'University of Kelaniya',
+  streams: ['Maths'],
+  duration: '4 years',
+  level: 'Undergraduate',
+  campusLogo: '/images/universities/uok-logo.png',
+  description: 'Industry-focused Computer Science degree with research, project-based learning, and the option to specialize in AI, Data Science, Cyber Security, Scientific Computing, or follow a Standard Pathway.',
+  enrollLink: '/enroll/cs-uok',
+  pathways: [
+    { name: 'Artificial Intelligence', icon: 'BrainCircuit', description: 'Machine learning, neural networks, and intelligent systems.' },
+    { name: 'Data Science', icon: 'BarChart3', description: 'Data analytics, big data, and predictive modeling.' },
+    { name: 'Cyber Security', icon: 'Shield', description: 'Network security, cryptography, and ethical hacking.' },
+    { name: 'Scientific Computing', icon: 'LineChart', description: 'High-performance and computational science.' },
+    { name: 'Standard Pathway', icon: 'BookOpen', description: 'Comprehensive computer science foundation covering all core areas.' }
+  ]
+},
     {
       id: '3',
       title: 'BSc (Hons) in Computer Science',
@@ -239,12 +185,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       level: 'Undergraduate',
       campusLogo: '/images/universities/jaffna-logo.png',
       description: 'Comprehensive CS program with a focus on modern computing, research, and industry readiness.',
-      enrollLink: '/enroll/cs-jaffna',
-      pathways: [
-        { name: 'AI & Data', icon: 'BarChart3', description: 'Work in AI, data analytics, and research.' },
-        { name: 'Web & Mobile', icon: 'Globe', description: 'Modern app and web development.' },
-        { name: 'Systems', icon: 'Cpu', description: 'Networks, operating systems, and cloud.' }
-      ]
+      enrollLink: '/enroll/cs-jaffna'
     },
     {
       id: '4',
@@ -255,28 +196,18 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       level: 'Undergraduate',
       campusLogo: '/images/universities/ruhuna-logo.jpeg',
       description: 'Solid Computer Science education with focus on programming, networking, and software systems.',
-      enrollLink: '/enroll/cs-ruhuna',
-      pathways: [
-        { name: 'Software Engineering', icon: 'Code', description: 'SE principles and large-scale software projects.' },
-        { name: 'Networking', icon: 'Wifi', description: 'Network protocols, admin, and security.' },
-        { name: 'Data Science', icon: 'BarChart3', description: 'Data-driven computing and analytics.' }
-      ]
+      enrollLink: '/enroll/cs-ruhuna'
     },
     {
       id: '5',
       title: 'BSc in Computer Science',
-      university: 'Trincomalee Campus, Eastern University',
+      university: 'Eastern University (Trincomalee Campus)',
       streams: ['Maths'],
       duration: '4 years',
       level: 'Undergraduate',
       campusLogo: '/images/universities/eastern.png',
       description: 'CS degree at Trinco campus; strong foundation in algorithms, programming, and applied computing.',
-      enrollLink: '/enroll/cs-trinco',
-      pathways: [
-        { name: 'Web Development', icon: 'Globe', description: 'Build modern, scalable web apps.' },
-        { name: 'Software Development', icon: 'Settings', description: 'Coding, debugging, and software projects.' },
-        { name: 'System Admin', icon: 'Cpu', description: 'SysOps, cloud, and IT infrastructure.' }
-      ]
+      enrollLink: '/enroll/cs-trinco'
     },
     {
       id: '6',
@@ -287,12 +218,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       level: 'Undergraduate',
       campusLogo: '/images/universities/uok-logo.png',
       description: 'Professional SE degree with modern SDLC, testing, and full-stack project work.',
-      enrollLink: '/enroll/se-uok',
-      pathways: [
-        { name: 'Full-Stack Dev', icon: 'Code2', description: 'Frontend + backend with latest tools.' },
-        { name: 'Agile & DevOps', icon: 'Repeat', description: 'Modern software delivery and automation.' },
-        { name: 'Mobile Apps', icon: 'Smartphone', description: 'Native and cross-platform app development.' }
-      ]
+      enrollLink: '/enroll/se-uok'
     },
     {
       id: '7',
@@ -303,12 +229,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       level: 'Undergraduate',
       campusLogo: '/images/universities/sabaragamuwa.png',
       description: 'Modern SE curriculum with deep dives into software architecture, cloud, and testing.',
-      enrollLink: '/enroll/se-sab',
-      pathways: [
-        { name: 'Cloud Computing', icon: 'Cloud', description: 'Cloud-native app architecture and deployment.' },
-        { name: 'Testing & QA', icon: 'CheckCircle', description: 'Quality assurance and automated testing.' },
-        { name: 'Agile Projects', icon: 'Rocket', description: 'Agile, SCRUM, and project management.' }
-      ]
+      enrollLink: '/enroll/se-sab'
     },
     {
       id: '8',
@@ -319,12 +240,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       level: 'Undergraduate',
       campusLogo: '/images/universities/sjp-logo.png',
       description: 'SE degree focusing on enterprise applications, web, mobile, and devops.',
-      enrollLink: '/enroll/se-sjp',
-      pathways: [
-        { name: 'Enterprise Apps', icon: 'Building', description: 'Large-scale system design.' },
-        { name: 'Web & Mobile', icon: 'Smartphone', description: 'Full-stack, modern frameworks.' },
-        { name: 'Security', icon: 'Shield', description: 'Secure coding, app security.' }
-      ]
+      enrollLink: '/enroll/se-sjp'
     },
     {
       id: '9',
@@ -335,12 +251,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       level: 'Undergraduate',
       campusLogo: '/images/universities/uom-logo.png',
       description: 'IT degree with strong emphasis on software, systems, and digital business.',
-      enrollLink: '/enroll/it-uom',
-      pathways: [
-        { name: 'Network Admin', icon: 'Wifi', description: 'Administer, secure, and optimize IT systems.' },
-        { name: 'Cloud & DevOps', icon: 'Cloud', description: 'Deploy/manage cloud infra, CI/CD.' },
-        { name: 'Business IT', icon: 'Briefcase', description: 'ERP, MIS, and tech in business.' }
-      ]
+      enrollLink: '/enroll/it-uom'
     },
     {
       id: '10',
@@ -351,12 +262,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       level: 'Undergraduate',
       campusLogo: '/images/universities/ucsc-logo.jpg',
       description: 'IS program combining IT, business, and digital transformation skills.',
-      enrollLink: '/enroll/is-ucsc',
-      pathways: [
-        { name: 'System Analysis', icon: 'Clipboard', description: 'Analyze org needs, design solutions.' },
-        { name: 'Digital Business', icon: 'Globe', description: 'E-business, digital transformation.' },
-        { name: 'Project Management', icon: 'Layers', description: 'Lead IT projects, teams.' }
-      ]
+      enrollLink: '/enroll/is-ucsc'
     },
     {
       id: '11',
@@ -367,12 +273,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       level: 'Undergraduate',
       campusLogo: '/images/universities/sabaragamuwa.png',
       description: 'First specialized Data Science degree: ML, AI, big data, and applied analytics.',
-      enrollLink: '/enroll/ds-sab',
-      pathways: [
-        { name: 'Machine Learning', icon: 'BrainCircuit', description: 'ML, deep learning, data pipelines.' },
-        { name: 'Data Engineering', icon: 'Database', description: 'Data warehousing, ETL, analytics.' },
-        { name: 'AI Applications', icon: 'Sparkle', description: 'Build and deploy AI-powered products.' }
-      ]
+      enrollLink: '/enroll/ds-sab'
     },
     {
       id: '12',
@@ -383,12 +284,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
       level: 'Undergraduate',
       campusLogo: '/images/universities/uom-logo.png',
       description: 'Sri Lanka’s first AI-focused degree: covers ML, deep learning, robotics, and ethics.',
-      enrollLink: '/enroll/ai-uom',
-      pathways: [
-        { name: 'Machine Learning', icon: 'BrainCircuit', description: 'Core ML, DL, and algorithms.' },
-        { name: 'Robotics', icon: 'Bot', description: 'Autonomous systems, IoT.' },
-        { name: 'Vision & Language', icon: 'Eye', description: 'NLP, computer vision.' }
-      ]
+      enrollLink: '/enroll/ai-uom'
     }
   ],
   'medicine': [
@@ -636,12 +532,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uok-logo.png',
     description: 'Applied engineering degree for Tech‑stream students—hands‑on, industry focused, with majors in Materials, Robotics & Automation, and Environmental/Energy technologies.',
-    enrollLink: '/enroll/engtech-uok',
-    pathways: [
-      { name: 'Materials & Process Tech', icon: 'Cube', description: 'Material science, processing, industrial tech.' },
-      { name: 'Robotics & Automation', icon: 'Bot', description: 'Automation systems, robotics, industrial control.' },
-      { name: 'Environmental/Energy Tech', icon: 'Sun', description: 'Renewable energy systems, environmental tech.' }
-    ]
+    enrollLink: '/enroll/engtech-uok'
   },
   // Other Kelaniya stream degrees (ICT and Biosystems)
   {
@@ -652,12 +543,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uok-logo.png',
     description: 'ICT program with a focus on software, network, systems, and digital business.',
-    enrollLink: '/enroll/ict-uok',
-    pathways: [
-      { name: 'Software Development', icon: 'Code', description: 'Web, app, and cloud software.' },
-      { name: 'Networking', icon: 'Wifi', description: 'System admin, networking.' },
-      { name: 'IT Management', icon: 'Clipboard', description: 'Tech for business.' }
-    ]
+    enrollLink: '/enroll/ict-uok'
   },
   {
     id: '6b',
@@ -667,12 +553,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uok-logo.png',
     description: 'Integrates biology, technology, and engineering for agriculture and biotech careers.',
-    enrollLink: '/enroll/biosys-uok',
-    pathways: [
-      { name: 'Agri Tech', icon: 'Leaf', description: 'Smart farming, food production.' },
-      { name: 'Bioprocessing', icon: 'Beaker', description: 'Food science, fermentation.' },
-      { name: 'Environmental Tech', icon: 'Globe', description: 'Sustainability, clean tech.' }
-    ]
+    enrollLink: '/enroll/biosys-uok'
   },
   // Moratuwa
   {
@@ -683,12 +564,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uom-logo.png',
     description: 'Technology-focused engineering degree with pathways in civil, mechanical, and electrical technology.',
-    enrollLink: '/enroll/btech-eng-uom',
-    pathways: [
-      { name: 'Civil Technology', icon: 'Building', description: 'Construction, materials, and surveying.' },
-      { name: 'Mechanical Technology', icon: 'Settings', description: 'Machines, manufacturing, CAD.' },
-      { name: 'Electrical Technology', icon: 'Zap', description: 'Electrical systems, automation.' }
-    ]
+    enrollLink: '/enroll/btech-eng-uom'
   },
   // Jayewardenepura
   {
@@ -699,12 +575,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/sjp-logo.png',
     description: 'Engineering Technology degree focused on applied engineering, design, and practical skills.',
-    enrollLink: '/enroll/engtech-sjp',
-    pathways: [
-      { name: 'Manufacturing Technology', icon: 'Factory', description: 'Modern manufacturing, automation.' },
-      { name: 'Civil & Construction', icon: 'Building', description: 'Structures, infrastructure.' },
-      { name: 'Electrical Technology', icon: 'Zap', description: 'Electrical installations, electronics.' }
-    ]
+    enrollLink: '/enroll/engtech-sjp'
   },
   {
     id: '3',
@@ -714,12 +585,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/sjp-logo.png',
     description: 'Modern ICT degree with software, hardware, networking, and cloud.',
-    enrollLink: '/enroll/ict-sjp',
-    pathways: [
-      { name: 'Software Engineering', icon: 'Code', description: 'Programming, app development.' },
-      { name: 'Networking', icon: 'Wifi', description: 'Networks, cloud, cyber security.' },
-      { name: 'Information Systems', icon: 'Monitor', description: 'IT solutions for businesses.' }
-    ]
+    enrollLink: '/enroll/ict-sjp'
   },
   {
     id: '4',
@@ -729,12 +595,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/sjp-logo.png',
     description: 'Tech meets biology: food, agriculture, environment, and applied biosciences.',
-    enrollLink: '/enroll/biosys-sjp',
-    pathways: [
-      { name: 'Agri Tech', icon: 'Leaf', description: 'Agricultural innovation, food technology.' },
-      { name: 'Bioprocessing', icon: 'Beaker', description: 'Biotech, food processing, fermentation.' },
-      { name: 'Environmental Tech', icon: 'Globe', description: 'Sustainable tech, waste management.' }
-    ]
+    enrollLink: '/enroll/biosys-sjp'
   },
   // Ruhuna
   {
@@ -745,12 +606,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/ruhuna-logo.jpeg',
     description: 'ICT program with a focus on coding, networking, and applied computing.',
-    enrollLink: '/enroll/ict-ruhuna',
-    pathways: [
-      { name: 'Software Engineering', icon: 'Code', description: 'Programming, SE.' },
-      { name: 'Network & Security', icon: 'Shield', description: 'Networking, cyber security.' },
-      { name: 'Business IT', icon: 'Monitor', description: 'Tech for industry.' }
-    ]
+    enrollLink: '/enroll/ict-ruhuna'
   },
   {
     id: '8',
@@ -760,12 +616,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/ruhuna-logo.jpeg',
     description: 'Combines agriculture, biotechnology, and technology for next-gen bioscience careers.',
-    enrollLink: '/enroll/biosys-ruhuna',
-    pathways: [
-      { name: 'Bio Agri Tech', icon: 'Leaf', description: 'Biology-driven farming.' },
-      { name: 'Bio Processing', icon: 'Beaker', description: 'Bioprocess, food tech.' },
-      { name: 'Environmental Solutions', icon: 'Globe', description: 'Green tech, bio remediation.' }
-    ]
+    enrollLink: '/enroll/biosys-ruhuna'
   },
   // Eastern (Trincomalee)
   {
@@ -776,12 +627,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/eastern.png',
     description: 'Practice-driven engineering technology: civil, mechanical, electrical.',
-    enrollLink: '/enroll/btech-eng-eastern',
-    pathways: [
-      { name: 'Civil Technology', icon: 'Building', description: 'Building and construction.' },
-      { name: 'Mechanical Technology', icon: 'Settings', description: 'Automation and manufacturing.' },
-      { name: 'Electrical Technology', icon: 'Zap', description: 'Electrical systems and control.' }
-    ]
+    enrollLink: '/enroll/btech-eng-eastern'
   },
   {
     id: '10',
@@ -791,11 +637,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/eastern.png',
     description: 'ICT degree in Eastern Province: software, networks, and digital systems.',
-    enrollLink: '/enroll/ict-eastern',
-    pathways: [
-      { name: 'Software Engineering', icon: 'Code', description: 'Modern programming, app dev.' },
-      { name: 'Networking', icon: 'Wifi', description: 'Network admin, cyber security.' }
-    ]
+    enrollLink: '/enroll/ict-eastern'
   },
   {
     id: '11',
@@ -805,11 +647,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/eastern.png',
     description: 'Agro-tech, biotech, and bioresource-focused technology degree.',
-    enrollLink: '/enroll/biosys-eastern',
-    pathways: [
-      { name: 'Agri Tech', icon: 'Leaf', description: 'Agro innovation, precision farming.' },
-      { name: 'Bioprocess', icon: 'Beaker', description: 'Bio-based manufacturing.' }
-    ]
+    enrollLink: '/enroll/biosys-eastern'
   },
   // Sabaragamuwa
   {
@@ -820,11 +658,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/sabaragamuwa.png',
     description: 'Prepares students for the digital future with ICT, coding, and applied systems.',
-    enrollLink: '/enroll/ict-sab',
-    pathways: [
-      { name: 'Software Engineering', icon: 'Code', description: 'Full-stack dev, SE.' },
-      { name: 'Networking', icon: 'Wifi', description: 'Admin, infrastructure, security.' }
-    ]
+    enrollLink: '/enroll/ict-sab'
   },
   {
     id: '13',
@@ -834,11 +668,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/sabaragamuwa.png',
     description: 'Technology for biosciences, sustainable agriculture, and bioprocessing.',
-    enrollLink: '/enroll/biosys-sab',
-    pathways: [
-      { name: 'Bio Agri Tech', icon: 'Leaf', description: 'Sustainable agri innovation.' },
-      { name: 'Bio Processing', icon: 'Beaker', description: 'Food and biotech process.' }
-    ]
+    enrollLink: '/enroll/biosys-sab'
   },
   // Uva Wellassa
   {
@@ -849,11 +679,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uva.jpg',
     description: 'Applied IT for industry: automation, data, industrial informatics.',
-    enrollLink: '/enroll/ind-it-uwu',
-    pathways: [
-      { name: 'Automation', icon: 'Bot', description: 'Robotics, smart systems.' },
-      { name: 'Data Systems', icon: 'Database', description: 'Analytics, IT management.' }
-    ]
+    enrollLink: '/enroll/ind-it-uwu'
   },
   {
     id: '15',
@@ -863,11 +689,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/uva.jpg',
     description: 'Multidisciplinary degree covering applied science, IT, and biosystems.',
-    enrollLink: '/enroll/tech-uwu',
-    pathways: [
-      { name: 'Applied IT', icon: 'Cpu', description: 'Programming, systems.' },
-      { name: 'Agro Tech', icon: 'Leaf', description: 'Modern farming, food science.' }
-    ]
+    enrollLink: '/enroll/tech-uwu'
   },
   // Vavuniya
   {
@@ -878,11 +700,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/vavuniya.png',
     description: 'Comprehensive ICT program for the Northern Province—software, networks, and info systems.',
-    enrollLink: '/enroll/ict-vavuniya',
-    pathways: [
-      { name: 'Software Development', icon: 'Code', description: 'Web, mobile, backend.' },
-      { name: 'Network & Security', icon: 'Shield', description: 'Cybersecurity, network admin.' }
-    ]
+    enrollLink: '/enroll/ict-vavuniya'
   },
   {
     id: '17',
@@ -892,11 +710,7 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
     level: 'Undergraduate',
     campusLogo: '/images/universities/vavuniya.png',
     description: 'Tech for biosciences, food systems, and green innovation.',
-    enrollLink: '/enroll/biosys-vavuniya',
-    pathways: [
-      { name: 'Biosystems', icon: 'Leaf', description: 'Agriculture and food tech.' },
-      { name: 'Bioprocess', icon: 'Beaker', description: 'Bio-manufacturing.' }
-    ]
+    enrollLink: '/enroll/biosys-vavuniya'
   }
 ],
   'arts': [
@@ -986,4 +800,5 @@ export const careerPrograms: Record<string, DegreeProgram[]> = {
 export const getCareerPrograms = (careerPath: string): DegreeProgram[] => {
   return careerPrograms[careerPath] || []
 }
-   
+    
+    
