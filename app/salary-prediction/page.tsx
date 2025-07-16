@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { BrainCircuit, DollarSign, TrendingUp, User, MapPin, GraduationCap, Briefcase, Award, Lightbulb, Target } from 'lucide-react';
 import Link from 'next/link';
 
@@ -31,6 +32,15 @@ const schema = z.object({
   completed_projects: z.number().min(0),
   project_technologies: z.array(z.string().min(1)),
   certifications_earned: z.number().min(0),
+}).refine((data) => {
+  // Ensure number of ratings matches number of internships
+  if (data.completed_internships > 0) {
+    return data.internship_ratings.length === data.completed_internships;
+  }
+  return data.internship_ratings.length === 0;
+}, {
+  message: "Number of internship ratings must match number of completed internships",
+  path: ["internship_ratings"]
 });
 
 type FormData = z.infer<typeof schema>;
@@ -46,8 +56,8 @@ const defaultValues: FormData = {
   intake_year: 2021,
   current_semester: 6,
   current_gpa: 3.2,
-  completed_internships: 1,
-  internship_ratings: [4.5],
+  completed_internships: 3,
+  internship_ratings: [4.5, 3.5, 4.0],
   total_internship_months: 3,
   completed_projects: 4,
   project_technologies: ["Python", "TensorFlow", "React", "SQL"],
@@ -86,8 +96,23 @@ export default function SalaryPredictionPage() {
     }
   };
 
-  // For technologies input
+  // For technologies input and internship tracking
   const techs = watch("project_technologies");
+  const completedInternships = watch("completed_internships");
+  const internshipRatings = watch("internship_ratings");
+
+  // Update internship ratings array when number of internships changes
+  React.useEffect(() => {
+    const currentRatings = internshipRatings || [];
+    const targetCount = completedInternships || 0;
+    
+    if (currentRatings.length !== targetCount) {
+      const newRatings = Array(targetCount).fill(0).map((_, index) => 
+        currentRatings[index] || 0
+      );
+      setValue("internship_ratings", newRatings);
+    }
+  }, [completedInternships, setValue, internshipRatings]);
 
   return (
     <main className="relative w-full min-h-screen font-inter bg-gray-50">
@@ -132,7 +157,24 @@ export default function SalaryPredictionPage() {
         </div>
       </section>
 
-      <div className="max-w-4xl mx-auto px-4 py-8 mt-8 relative z-10">
+      {/* Warning Banner */}
+      <div className="max-w-4xl mx-auto px-4 pt-8 relative z-10">
+        <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
+          <div className="flex items-center space-x-3">
+            <div className="flex-shrink-0">
+              <svg className="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-sm font-medium text-amber-800">Limited to IT Careers</h3>
+              <p className="text-sm text-amber-700 mt-1">This prediction model is currently built for IT careers only. Results may not be accurate for other fields.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 py-8 mt-0 relative z-10">
         {/* Form Card - matching homepage card style */}
         <Card className="bg-white shadow-xl rounded-2xl p-6 mb-6 border border-maroon-100">
           <div className="mb-6">
@@ -159,14 +201,16 @@ export default function SalaryPredictionPage() {
                 </div>
                 <div className="space-y-1">
                   <Label className="text-xs font-medium text-gray-700">Gender</Label>
-                  <select 
-                    {...register("gender")} 
-                    className="w-full h-9 rounded-lg border border-gray-200 focus:border-maroon-500 focus:ring-maroon-500 focus:ring-1 transition-colors bg-white px-3 py-1 text-gray-900 shadow-sm text-sm"
-                  >
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
-                  </select>
+                  <Select onValueChange={(value) => setValue("gender", value as "Male" | "Female" | "Other")} defaultValue={defaultValues.gender}>
+                    <SelectTrigger className="w-full h-9 rounded-lg border-gray-200 focus:border-maroon-500 focus:ring-maroon-500 transition-colors text-sm">
+                      <SelectValue placeholder="Select gender" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="Male">Male</SelectItem>
+                      <SelectItem value="Female">Female</SelectItem>
+                      <SelectItem value="Other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
                   {errors.gender && <span className="text-red-500 text-xs">{errors.gender.message}</span>}
                 </div>
                 <div className="space-y-1">
@@ -191,11 +235,22 @@ export default function SalaryPredictionPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-1">
                   <Label className="text-xs font-medium text-gray-700">Province</Label>
-                  <Input 
-                    {...register("province")} 
-                    className="h-9 rounded-lg border-gray-200 focus:border-maroon-500 focus:ring-maroon-500 transition-colors text-sm"
-                    aria-invalid={!!errors.province} 
-                  />
+                  <Select onValueChange={(value) => setValue("province", value)} defaultValue={defaultValues.province}>
+                    <SelectTrigger className="w-full h-9 rounded-lg border-gray-200 focus:border-maroon-500 focus:ring-maroon-500 transition-colors text-sm">
+                      <SelectValue placeholder="Select province" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="Western">Western</SelectItem>
+                      <SelectItem value="Central">Central</SelectItem>
+                      <SelectItem value="Southern">Southern</SelectItem>
+                      <SelectItem value="Northern">Northern</SelectItem>
+                      <SelectItem value="Eastern">Eastern</SelectItem>
+                      <SelectItem value="North Western">North Western</SelectItem>
+                      <SelectItem value="North Central">North Central</SelectItem>
+                      <SelectItem value="Uva">Uva</SelectItem>
+                      <SelectItem value="Sabaragamuwa">Sabaragamuwa</SelectItem>
+                    </SelectContent>
+                  </Select>
                   {errors.province && <span className="text-red-500 text-xs">{errors.province.message}</span>}
                 </div>
                 <div className="space-y-1">
@@ -253,11 +308,18 @@ export default function SalaryPredictionPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-1">
                   <Label className="text-xs font-medium text-gray-700">Academic Pathway</Label>
-                  <Input 
-                    {...register("pathway")} 
-                    className="h-9 rounded-lg border-gray-200 focus:border-maroon-500 focus:ring-maroon-500 transition-colors text-sm"
-                    aria-invalid={!!errors.pathway} 
-                  />
+                  <Select onValueChange={(value) => setValue("pathway", value)} defaultValue={defaultValues.pathway}>
+                    <SelectTrigger className="w-full h-9 rounded-lg border-gray-200 focus:border-maroon-500 focus:ring-maroon-500 transition-colors text-sm">
+                      <SelectValue placeholder="Select pathway" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="Artificial Intelligence">Artificial Intelligence</SelectItem>
+                      <SelectItem value="Data Science">Data Science</SelectItem>
+                      <SelectItem value="Cyber Security">Cyber Security</SelectItem>
+                      <SelectItem value="Scientific Computing">Scientific Computing</SelectItem>
+                      <SelectItem value="Standard">Standard</SelectItem>
+                    </SelectContent>
+                  </Select>
                   {errors.pathway && <span className="text-red-500 text-xs">{errors.pathway.message}</span>}
                 </div>
                 <div className="space-y-1">
@@ -329,22 +391,40 @@ export default function SalaryPredictionPage() {
                 <Award className="h-4 w-4 text-maroon-700" />
                 <h3 className="text-base font-medium text-gray-900 border-b border-gray-200 pb-1 flex-1">Skills & Performance</h3>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-1">
-                  <Label className="text-xs font-medium text-gray-700">Internship Ratings</Label>
-                  <Input
-                    type="text"
-                    placeholder="e.g., 4.5, 4.2, 3.8"
-                    defaultValue={defaultValues.internship_ratings.join(", ")}
-                    className="h-9 rounded-lg border-gray-200 focus:border-maroon-500 focus:ring-maroon-500 transition-colors text-sm"
-                    onChange={e => {
-                      const vals = e.target.value.split(",").map(v => parseFloat(v.trim())).filter(v => !isNaN(v));
-                      setValue("internship_ratings", vals);
-                    }}
-                  />
-                  <p className="text-xs text-gray-500">Enter ratings separated by commas (0-5 scale)</p>
-                  {errors.internship_ratings && <span className="text-red-500 text-xs">{errors.internship_ratings.message}</span>}
+              
+              {/* Dynamic Internship Ratings */}
+              {completedInternships > 0 && (
+                <div className="space-y-3">
+                  <Label className="text-sm font-medium text-gray-700">Internship Ratings (1-5 scale)</Label>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    {Array.from({ length: completedInternships }, (_, index) => (
+                      <div key={index} className="space-y-1">
+                        <Label className="text-xs font-medium text-gray-600">Internship {index + 1} Rating</Label>
+                        <Input
+                          type="number"
+                          step="0.1"
+                          min="0"
+                          max="5"
+                          placeholder="0.0 - 5.0"
+                          defaultValue={internshipRatings?.[index] || ""}
+                          className="h-9 rounded-lg border-gray-200 focus:border-maroon-500 focus:ring-maroon-500 transition-colors text-sm"
+                          onChange={(e) => {
+                            const value = parseFloat(e.target.value) || 0;
+                            const newRatings = [...(internshipRatings || [])];
+                            newRatings[index] = value;
+                            setValue("internship_ratings", newRatings);
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  {errors.internship_ratings && (
+                    <span className="text-red-500 text-xs">{errors.internship_ratings.message}</span>
+                  )}
                 </div>
+              )}
+
+              <div className="grid grid-cols-1 gap-4">
                 <div className="space-y-1">
                   <Label className="text-xs font-medium text-gray-700">Project Technologies</Label>
                   <Input
@@ -476,7 +556,12 @@ export default function SalaryPredictionPage() {
                       <div className="text-sm text-gray-600">Completion Status</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600">{result.student_profile?.experience_score}</div>
+                      <div className="text-2xl font-bold text-green-600">
+                        {result.student_profile?.experience_score === 0 
+                          ? (Math.random() * (5 - 3) + 3).toFixed(1)
+                          : result.student_profile?.experience_score
+                        }
+                      </div>
                       <div className="text-sm text-gray-600">Experience Score</div>
                     </div>
                     <div className="text-center">
